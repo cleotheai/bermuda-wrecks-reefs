@@ -57,9 +57,15 @@
       "depth": "~45 feet (13.7 m)",
       "length": "Unknown",
       "tonnage": "Unknown",
-      "history": "The Caraquet was extensively salvaged by Herbie Smith at the time of her sinking and then again after World War II, removing the larger portions of the non-salvageable remains.",
-      "current_condition": "The wreckage lies in relatively shallow waters — in 16 to 30 feet of water — with her steam boilers, propeller shaft, and deck winches still recognizable.",
-      "protected": "Unknown",
+      "history": "On June 25, 1923, while en route from the British Virgin Islands to Halifax, the vessel sank after hitting rough seas. Captain Fernandez was exonerated of any blame after the Marine Board investigation. The Caraquet was extensively salvaged by Herbie Smith at the time of her sinking and then again after World War II, removing the larger portions of the non-salvageable remains.",
+      "current_condition": "Broken up by ocean swells, the wreckage is spread out over a wide area covering almost two acres in up to 45 feet of water. The most distinctive portions of the wreck include her engine, four prominent boilers (the large tin can-shaped units in which steam pressure built up to drive the vessel), and scattered debris across the reef. The wreckage lies in relatively shallow waters with her steam boilers, propeller shaft, and deck winches still recognizable.",
+      "features": [
+        "Wreckage spread over almost two acres in up to 45 feet of water",
+        "Most distinctive portions: engine, four prominent boilers (large tin can-shaped units)",
+        "Broken up by ocean swells",
+        "Extensively salvaged by Herbie Smith at time of sinking, and again after WWII"
+      ],
+      "data_quality": "snippet",
       "source_url": "https://bermuda100.ucsd.edu/caraquet/index.php"
     },
     {
