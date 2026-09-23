@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Taunton — Bermuda Wrecks &amp; Reefs</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="top-bar">
+  <a class="site-title" href="../index.html">Bermuda Wrecks &amp; Reefs</a>
+  <div class="nav-links">
+    <a href="../index.html">All Sites</a>
+    <a href="../about.html">About</a>
+  </div>
+  <button class="menu-btn">&#9776;</button>
+</div>
+<div class="main">
+  <a class="back-link" href="../index.html">&#8592; Back to all sites</a>
+  <div class="site-page-header">
+    <div class="site-page-type">Wreck</div>
+    <h1 class="site-page-title">The Taunton</h1>
+  </div>
+  <div class="site-card-snippet" style="margin-top:8px;display:inline-block">Reference only — details limited</div>
+  
+    <div class="wreck-section">
+      <div class="section-heading">History</div>
+      <div class="section-text">The captain posted a lookout, but the Taunton fell victim to Bermuda&#x27;s northern reefs on November 24, 1920, after running aground on the North East Breaker reef. The Danish-built steamer had set sail for Galveston, Texas with a cargo of general merchandise.</div>
+      
+    </div>
+    <div class="wreck-section">
+      <div class="section-heading">Current Condition</div>
+      <div class="section-text">Today the ship lies in an average of 20 feet of water, with her bow, steam engine and boilers still visible and upright on the northeast reef. The photogenic wreck has her mid-section collapsed, while the bow and stern are pretty intact still.</div>
+      
+    </div>
+  <div class="stats-box">
+    <div class="stats-title">Statistics</div>
+    <div class="stats-grid"><div class="stat-row"><span class="stat-label">Type:</span><span class="stat-value">Danish-built steamer (cargo ship)</span></div><div class="stat-row"><span class="stat-label">Built:</span><span class="stat-value">Unknown — Danish-built</span></div><div class="stat-row"><span class="stat-label">Sank:</span><span class="stat-value">November 24, 1920 — set sail for Galveston, Texas with general cargo; after running aground on the North East Breaker reef, the captain posted a lookout, but the Taunton fell victim to Bermuda&#x27;s northern reefs</span></div><div class="stat-row"><span class="stat-label">Location:</span><span class="stat-value">North East Breaker reef — northern reefs of Bermuda</span></div><div class="stat-row"><span class="stat-label">Depth:</span><span class="stat-value">Average 20 feet (6 m)</span></div><div class="stat-row"><span class="stat-label">Length:</span><span class="stat-value">Unknown</span></div><div class="stat-row"><span class="stat-label">Tonnage:</span><span class="stat-value">Unknown</span></div><div class="stat-row"><span class="stat-label">Status / Protection:</span><span class="stat-value">Unknown</span></div></div>
+  </div>
+  <div class="multimedia-section">
+    <div class="section-heading">Multimedia</div>
+    <div class="multimedia-grid">
+      <div class="media-placeholder"><span class="media-label">3D Model</span><span class="media-hint">Not in reference</span></div>
+      <div class="media-placeholder"><span class="media-label">Video</span><span class="media-hint">Not in reference</span></div>
+      <div class="media-placeholder"><span class="media-label">Photography</span><span class="media-hint">Not in reference</span></div>
+      <div class="media-placeholder"><span class="media-label">Documents</span><span class="media-hint">Not in reference</span></div>
+    </div>
+    <div style="margin-top:8px">
+      <a class="media-link" href="https://bermuda100.ucsd.edu/taunton/index.php" target="_blank">View original page on Bermuda 100 &uarr;</a>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <p><a href="../index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/taunton/index.php" target="_blank">Bermuda 100 Project</a> &middot; 2026-09-23</p>
+</footer>
+<script>
+document.querySelector('.menu-btn')?.addEventListener('click', function() {
+  var nav = document.querySelector('.nav-links');
+  if (!nav) return;
+  var isHidden = nav.style.display === 'none' || nav.style.display === '';
+  nav.style.display = isHidden ? 'flex' : '';
+  nav.style.flexDirection = 'column';
+  nav.style.position = 'absolute';
+  nav.style.top = '52px';
+  nav.style.left = '0';
+  nav.style.right = '0';
+  nav.style.background = '#1a1a2e';
+  nav.style.padding = '8px';
+  nav.style.gap = '0';
+});
+</script>
+</body>
+</html>

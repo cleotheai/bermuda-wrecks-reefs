@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Bermuda Wrecks &amp; Reefs</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="top-bar">
+  <a class="site-title" href="index.html">Bermuda Wrecks &amp; Reefs</a>
+  <div class="nav-links">
+    <a href="index.html">All Sites</a>
+    <a href="about.html">About</a>
+  </div>
+  <button class="menu-btn">&#9776;</button>
+</div>
+<div class="main">
+  <a class="back-link" href="index.html">&#8592; Back to all sites</a>
+  <div class="section">
+    <div class="section-title">About This Site</div>
+    <div class="about-text">
+      <p>This site is a reference compilation of Bermuda's shipwrecks and reef dive sites. All information is sourced from the <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> — a collaboration between UC San Diego, the Bermuda government, and the Bermuda Underwater Exploration Institute to digitally document 100+ shipwreck sites and natural habitats around Bermuda.</p>
+      <p>Bermuda is known as the shipwreck capital of the world — its surrounding reefs have claimed over 300 vessels over the centuries, from 17th-century wooden galleons to modern freighters.</p>
+    </div>
+    <div class="section-title">Data Coverage</div>
+    <ul class="about-list">
+      <li><strong>35 shipwrecks</strong> — from the 17th-century <em>Warwick</em> and <em>Sea Venture</em> to modern wrecks like the <em>Xing Da</em> and <em>Corinthian</em></li>
+      <li><strong>12 reef &amp; dive sites</strong> — including North Rock, South West Breaker, Cathedral, Snake Pit, and more</li>
+      <li><strong>18 wrecks</strong> have full details from the original Bermuda 100 pages</li>
+      <li><strong>15 wrecks</strong> have limited reference data (pages timed out or unavailable at compilation)</li>
+      <li><strong>12 reef sites</strong> with reference data</li>
+    </ul>
+    <div class="section-title">Bermuda 100 Challenge</div>
+    <div class="about-text">
+      <p>The Bermuda 100 Challenge aims to digitally document 100 or more historic shipwrecks and distinct natural habitats in Bermuda's waters using advanced underwater, aerial, and satellite imaging — including 3D models, video, and photography.</p>
+    </div>
+    <div class="section-title">Disclaimer</div>
+    <div class="about-text">
+      <p>This site is a reference copy built for personal use and offline access. Details are compiled from the Bermuda 100 website. Sites marked "Reference only" have limited data — the original page was inaccessible at time of compilation. Always verify against the original Bermuda 100 source for the most current and complete information.</p>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Compiled 2026-09-23</p>
+</footer>
+<script>
+document.querySelector('.menu-btn')?.addEventListener('click', function() {
+  var nav = document.querySelector('.nav-links');
+  if (!nav) return;
+  var isHidden = nav.style.display === 'none' || nav.style.display === '';
+  nav.style.display = isHidden ? 'flex' : '';
+  nav.style.flexDirection = 'column';
+  nav.style.position = 'absolute';
+  nav.style.top = '52px';
+  nav.style.left = '0';
+  nav.style.right = '0';
+  nav.style.background = '#1a1a2e';
+  nav.style.padding = '8px';
+  nav.style.gap = '0';
+});
+</script>
+</body>
+</html>

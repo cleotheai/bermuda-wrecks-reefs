@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Warwick — Bermuda Wrecks &amp; Reefs</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="top-bar">
+  <a class="site-title" href="../index.html">Bermuda Wrecks &amp; Reefs</a>
+  <div class="nav-links">
+    <a href="../index.html">All Sites</a>
+    <a href="../about.html">About</a>
+  </div>
+  <button class="menu-btn">&#9776;</button>
+</div>
+<div class="main">
+  <a class="back-link" href="../index.html">&#8592; Back to all sites</a>
+  <div class="site-page-header">
+    <div class="site-page-type">Wreck</div>
+    <h1 class="site-page-title">The Warwick</h1>
+  </div>
+  
+  
+    <div class="wreck-section">
+      <div class="section-heading">History</div>
+      <div class="section-text">In November 1619, the English &#x27;merchantman&#x27; brigantine (galleon?), the Warwick, was preparing to leave Castle Harbour in Bermuda with badly needed supplies destined for the struggling Virginia colony of Jamestown. A major hurricane was threatening Bermuda, so the ship&#x27;s captain opted to remain at anchor in the harbor, hoping that the sheer limestone cliffs would mitigate some of the worst winds. The crew sealed the ship, removed her the cargo, lashed down her cannons and braced for the northwesterly winds. As the storm worsened, the ship&#x27;s anchor came loose and the vessel crashed into the reefs that lined the base of the limestone cliffs. Once her hull was breeched, the Warwick began taking on water and rolled onto her starboard side which became engulfed in silt — preserving the wood and repelling teredo (wood-eating naval shipworms), a species of saltwater clam. The remains of the Warwick were first rediscovered and analysed in 1967 by legendary Bermudian diver Teddy Tucker and Mendel Peterson using a magnetometer. When found, it was the most complete wooden-hulled English merchantman discovered to that date. There was follow-up field work in 1979. Between 2008 and 2012, the National Museum of Bermuda, working with the Institute of Nautical Archaeology and the Center of Maritime Archaeology and Conservation at Texas A&amp;M, excavated and documented what&#x27;s left of the Warwick.</div>
+      
+    </div>
+    <div class="wreck-section">
+      <div class="section-heading">Current Condition</div>
+      <div class="section-text">A collection of interesting artifacts from the early Warwick investigations are on display in the Shipwreck Gallery at the Bermuda Underwater Exploration Institute. The surviving structure is shedding new light on 17th-Century ship construction, life aboard an armed merchant vessel, and the early colonial history of Bermuda and America. Analysis, research and publication of the study&#x27;s findings are continuing. The ship&#x27;s starboard side became engulfed in silt, preserving the wood. Remains of timber used in construction of the Warwick&#x27;s starboard side, held together with heavy wooden pegs known as treenails, were documented. The Warwick is classified as Restricted — No Diving.</div>
+      
+    </div>
+  <div class="stats-box">
+    <div class="stats-title">Statistics</div>
+    <div class="stats-grid"><div class="stat-row"><span class="stat-label">Type:</span><span class="stat-value">English &#x27;merchantman&#x27; brigantine (possibly a galleon) — armed merchant vessel / magazine ship belonging to Sir Robert Rich, 2nd Earl of Warwick</span></div><div class="stat-row"><span class="stat-label">Built:</span><span class="stat-value">Unknown — mid-sized English vessel designed to ply the warm waters of the Caribbean and Bermuda</span></div><div class="stat-row"><span class="stat-label">Sank:</span><span class="stat-value">October 20, 1619 (or November 1619 per Bermuda 100) — a major hurricane threatened Bermuda while the ship was at anchor in Castle Harbour preparing to leave with supplies for the struggling Virginia colony of Jamestown; the ship&#x27;s anchor came loose and the vessel crashed into the reefs that lined the base of the limestone cliffs; once her hull was breached, the Warwick began taking on water and rolled onto her starboard side which became engulfed in silt — preserving the wood and repelling teredo (wood-eating naval shipworms)</span></div><div class="stat-row"><span class="stat-label">Location:</span><span class="stat-value">32°28&#x27;58.91&quot;N, 64°42&#x27;17.64&quot;W — Castle Harbour, Bermuda</span></div><div class="stat-row"><span class="stat-label">Depth:</span><span class="stat-value">40 feet (12.2 m)</span></div><div class="stat-row"><span class="stat-label">Length:</span><span class="stat-value">228 feet (69.5 m)</span></div><div class="stat-row"><span class="stat-label">Tonnage:</span><span class="stat-value">1,329 tons — capacity: 75,000 cubic feet (2,124 cubic meters)</span></div><div class="stat-row"><span class="stat-label">Status / Protection:</span><span class="stat-value">Restricted — No Diving</span></div></div>
+  </div>
+  <div class="multimedia-section">
+    <div class="section-heading">Multimedia</div>
+    <div class="multimedia-grid">
+      <div class="media-placeholder"><span class="media-label">3D Model</span><span class="media-hint">Not in reference</span></div>
+      <div class="media-placeholder"><span class="media-label">Video</span><span class="media-hint">Not in reference</span></div>
+      <div class="media-placeholder"><span class="media-label">Photography</span><span class="media-hint">Not in reference</span></div>
+      <div class="media-placeholder"><span class="media-label">Documents</span><span class="media-hint">Not in reference</span></div>
+    </div>
+    <div style="margin-top:8px">
+      <a class="media-link" href="https://bermuda100.ucsd.edu/warwick/index.php" target="_blank">View original page on Bermuda 100 &uarr;</a>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <p><a href="../index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/warwick/index.php" target="_blank">Bermuda 100 Project</a> &middot; 2026-09-23</p>
+</footer>
+<script>
+document.querySelector('.menu-btn')?.addEventListener('click', function() {
+  var nav = document.querySelector('.nav-links');
+  if (!nav) return;
+  var isHidden = nav.style.display === 'none' || nav.style.display === '';
+  nav.style.display = isHidden ? 'flex' : '';
+  nav.style.flexDirection = 'column';
+  nav.style.position = 'absolute';
+  nav.style.top = '52px';
+  nav.style.left = '0';
+  nav.style.right = '0';
+  nav.style.background = '#1a1a2e';
+  nav.style.padding = '8px';
+  nav.style.gap = '0';
+});
+</script>
+</body>
+</html>
