@@ -290,18 +290,26 @@
     },
     {
       "name": "The Mary Celestia",
-      "type": "Paddlewheel steamer — blockade runner (Confederacy)",
-      "built": "1864 in Liverpool, England",
-      "sank": "March 21, 1864 — struck Archer's Reef and sank in 30 minutes; five people died attempting to escape",
-      "location": "32°28'47.00\"N, 64°39'53.00\"W",
-      "depth": "55 feet (17 m)",
-      "length": "225 feet (68.5 m)",
+      "type": "Paddle steamer — Civil War blockade runner (built New York, British-registered in Bermuda)",
+      "built": "1854 in New York, USA",
+      "sank": "September 1864 — ran aground and sank off the south shore of Bermuda on her final voyage; captained by master mariner Thomas Pickering of Key West, Florida; was making trips from Nassau to Bermuda carrying contraband goods and returning with cotton intended for European markets; on her final voyage she carried a cargo of munitions, canned goods, and wine",
+      "location": "Off the south shore of Bermuda — one of Bermuda's premier dive sites",
+      "depth": "55 feet (17 m) — sitting in 55 feet of blue water on a sandy seabed",
+      "length": "225 feet (68.5 m) — paddle steamer",
       "tonnage": "207 tons displacement",
-      "history": "At the time of its sinking in 1864, the Mary-Celestia was barely two years old. It operated as a blockade runner for the Confederacy to transport banned goods during the American Civil War. On March 21, 1864, the Mary Celestia struck the reef at Archer's Point and sank within 30 minutes. Five people died in the evacuation. The wreck became one of Bermuda's most famous and popular dive sites.",
-      "current_condition": "At the time of its sinking in 1864, the Mary-Celestia was barely two years old. It operated as a blockade runner for the Confederacy to transport banned goods during the American Civil War. The wreck lies in 55 feet of water. The paddlewheel, boilers, and engine remain visible. The bow section separated and sit in different locations. The wreck is one of the most popular and well-documented sites in Bermuda.",
-      "protected": "Bermuda Shipwreck Certificate Program site",
-      "source_url": "https://bermuda100.ucsd.edu/mary-celestia/index.php",
-      "data_quality": "snippet"
+      "history": "Built in New York in 1854, the paddle steamer Mary Celestia was typical of the sleek, fast vessels built to evade the Union blockade during the American Civil War. She was captained by the master mariner Thomas Pickering of Key West, Florida, who made several trips from Nassau to Bermuda carrying contraband goods and returning with cotton intended for European markets. On her final voyage in September 1864, the Mary Celestia ran aground and sank off the south shore of Bermuda, carrying a cargo of munitions, canned goods, and wine. The wreck is one of Bermuda's premier dive sites. The bow section was heavily salvaged in the aftermath, but a significant portion of the hull remains intact on the seabed in about 55 feet of water.",
+      "current_condition": "Sitting in 55 feet of blue water, the remains are spread across a sandy seabed, providing excellent visibility for diving. While the wooden portions have deteriorated, the iron parts — such as the massive boilers, the framing of the engine, and the paddle wheels — stand out vividly against the white sand. In recent years, hurricanes have occasionally shifted the sands, revealing new artifacts. In 2011, a rare unopened bottle of wine from 1864 was discovered during a routine dive, making international headlines. The site is protected as a historic maritime site, and spearfishing is strictly prohibited within the zone. Despite being more than a century and a half underwater, the wreck remains one of the best-preserved Civil War-era shipwrecks in the Atlantic. Divers can easily explore the debris field, where a massive anchor, paddle wheels, boilers, and machinery components remain visible.",
+      "protected": "Protected as a historic maritime site — spearfishing is strictly prohibited within the zone",
+      "features": [
+        "Massive anchor, paddle wheels, boilers, and machinery components visible in the debris field",
+        "Iron parts (boilers, engine framing, paddle wheels) stand out vividly against white sand",
+        "Hurricanes occasionally shift sands, revealing new artifacts",
+        "Rare unopened bottle of wine from 1864 discovered in 2011 — made international headlines",
+        "One of the best-preserved Civil War-era shipwrecks in the Atlantic",
+        "Popular destination for both recreational divers and marine archaeologists"
+      ],
+      "data_quality": "full",
+      "source_url": "https://bermuda100.ucsd.edu/mary-celestia/index.php"
     },
     {
       "name": "Mills Breaker Wrecks",
