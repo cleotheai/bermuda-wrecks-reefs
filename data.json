@@ -50,26 +50,22 @@
     },
     {
       "name": "The Caraquet",
-      "type": "British mail steamship",
-      "built": "1894 — 200-foot ship",
+      "type": "Unverified — Bermuda 100 page could not be loaded",
+      "built": "1894 (per Bermuda 100 snippet)",
       "sank": "June 25, 1923 — the vessel sank after hitting rough seas; Captain Fernandez was exonerated of any blame after the Marine Board of Inquiry found that an abnormally strong current had pushed the Caraquet further than the captain had calculated",
-      "location": "Bermuda's northern barrier reef — approximately 10 miles north-west of Fort St. Catherine",
-      "depth": "35–40 feet (10.7–12.2 m)",
-      "length": "200 feet (61 m)",
+      "location": "Bermuda's northern barrier reef (per Bermuda 100 snippet)",
+      "depth": "Up to 45 feet (per Bermuda 100 snippet)",
+      "length": "Unknown",
       "tonnage": "Unknown",
-      "history": "Built in 1894, the 200-foot British mail steamship Caraquet sank on June 25, 1923 after hitting rough seas. The Caraquet was extensively salvaged by Herbie Smith at the time of her sinking and then again after World War II, removing the larger portions of the non-salvageable remains. The Caraquet was heavily salvaged for her brass and bronze at the time of her sinking and then again after World War II. The wreck was never lost and was always known as a fishing site.",
-      "current_condition": "Today the wreckage is spread out over a wide area covering almost two acres in 35 to 40 feet of water. The most distinctive portions of the wreckage are her engine, four prominent boilers (the large tin can-shaped units in which steam pressure was built up to drive the engine), two large deck winches and her massive anchor, all of which are lying on top of the flattened collapsed hull and deck plates of the ship. This wreck is a popular dive site that is celebrated for its extensive wreckage in shallow clear water. Broken up by ocean swells, the wreckage is spread out over a wide area covering almost two acres in up to 45 feet of water.",
+      "history": "On June 25, 1923, the vessel sank after hitting rough seas. Captain Fernandez was exonerated of any blame after the Marine Board of Inquiry found that an abnormally strong current had pushed the Caraquet further than the captain had calculated. The Caraquet was extensively salvaged by Herbie Smith at the time of her sinking and then again after World War II, removing the larger portions of the non-salvageable remains.",
+      "current_condition": "Broken up by ocean swells, the wreckage is spread out over a wide area covering almost two acres in up to 45 feet of water. The most distinctive portions of the wreck include her engine, four prominent boilers (the large tin can-shaped units in which steam pressure built up to drive the vessel).",
       "features": [
-        "Wreckage spread over almost two acres in 35–40 feet of water",
-        "Most distinctive: engine, four prominent boilers (large tin can-shaped units), two large deck winches, massive anchor",
-        "All major features lying on top of flattened collapsed hull and deck plates",
-        "Popular dive site celebrated for extensive wreckage in shallow clear water",
-        "Heavily salvaged for brass and bronze at time of sinking and again after WWII",
-        "Never lost — always known as a fishing site",
-        "Built 1894 — 200-foot British mail steamship"
+        "Wreckage spread over almost two acres in up to 45 feet of water",
+        "Most distinctive portions: engine, four prominent boilers (large tin can-shaped units in which steam pressure built up to drive the vessel)"
       ],
-      "data_quality": "snippet",
-      "source_url": "https://bermuda100.ucsd.edu/caraquet/index.php"
+      "data_quality": "unverified-old-salt-removed",
+      "source_url": "https://bermuda100.ucsd.edu/caraquet/index.php",
+      "notes": "Old Salt Blog reference (oldsaltblog.com/exploring-the-caraquet-shipwreck/) has been removed. Only Bermuda 100-verified facts retained. Bermuda 100 page could not be loaded directly; content sourced from search snippets of the Bermuda 100 page."
     },
     {
       "name": "The Constellation",
