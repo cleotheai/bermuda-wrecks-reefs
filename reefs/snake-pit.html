@@ -113,6 +113,58 @@
     color: #cfd8e6;
     line-height: 1.75;
   }
+  .page-frame {
+    background: #1a1d27;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .page-frame .page-hero {
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+  }
+  .page-frame .source-strip,
+  .page-frame .quick-stats,
+  .page-frame .details-row,
+  .page-frame .content-block {
+    margin-bottom: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .page-frame .source-strip {
+    border-top: 1px solid #2d3140;
+    margin-top: 0;
+  }
+  .page-frame .quick-stats {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .details-row {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .content-block {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .content-block:last-child {
+    border-bottom: 1px solid #2d3140;
+  }
+  .page-ref-only .page-hero {
+    border: none;
+    border-radius: 0;
+  }
+  .page-ref-only .source-strip {
+    border-top: 1px solid #2d3140;
+  }
+  .page-ref-only .content-block {
+    border-top: 1px solid #2d3140;
+    border-bottom: 1px solid #2d3140;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
   footer { margin-top: 24px; }
   @media (max-width: 639px) {
     .page-hero { padding: 20px 16px; }
@@ -128,6 +180,7 @@
 
 </style>
 </head><body>
+<body class="page-ref-only">
 <div class="top-bar">
   <a class="site-title" href="index.html">Bermuda Wrecks &amp; Reefs</a>
   <div class="nav-links">
@@ -138,7 +191,8 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-hero">
+  <div class="page-frame">
+    <div class="page-hero">
     <div class="page-hero-title">Snake Pit</div>
     <div class="page-hero-type ref">Reference Only</div>
     <div class="page-hero-summary">Bermuda 100 or .</div>
@@ -146,6 +200,7 @@
   <div class="content-block">
     <div class="content-heading">Description</div>
     <div class="content-text">Bermuda 100 or . his protected dive site is known for a large bowl of pure white sand surrounded by healthy coral patch reef. With incredible visibility on the high tide year round, the site got its name from the small habitat of grass eels that can sometimes be seen in one edge of the sand bowl by the patient diver – a collection of small ‘snakes’ emerging from the sand (which can initially look like a bed of fine sea grass). The Snake Pit makes for a great dive for anyone visiting the northern shipwrecks, and because of its large enclosed bowl shape, it appeals to divers interested in night dives. As it is just off the North Channel, experienced pilots and dive shops can reach the site in the evening and return to Bermuda in the dark without running into reef by following the marked channel. 32°26&#x27;25.80&quot;N, 64°50&#x27;8.88&quot;W 40 feet (12.2 meters) 600m</div>
+  </div>
   </div>
 </div>
 <footer class="footer">

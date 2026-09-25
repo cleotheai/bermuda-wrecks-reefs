@@ -113,6 +113,58 @@
     color: #cfd8e6;
     line-height: 1.75;
   }
+  .page-frame {
+    background: #1a1d27;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .page-frame .page-hero {
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+  }
+  .page-frame .source-strip,
+  .page-frame .quick-stats,
+  .page-frame .details-row,
+  .page-frame .content-block {
+    margin-bottom: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .page-frame .source-strip {
+    border-top: 1px solid #2d3140;
+    margin-top: 0;
+  }
+  .page-frame .quick-stats {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .details-row {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .content-block {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .content-block:last-child {
+    border-bottom: 1px solid #2d3140;
+  }
+  .page-ref-only .page-hero {
+    border: none;
+    border-radius: 0;
+  }
+  .page-ref-only .source-strip {
+    border-top: 1px solid #2d3140;
+  }
+  .page-ref-only .content-block {
+    border-top: 1px solid #2d3140;
+    border-bottom: 1px solid #2d3140;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
   footer { margin-top: 24px; }
   @media (max-width: 639px) {
     .page-hero { padding: 20px 16px; }
@@ -128,6 +180,7 @@
 
 </style>
 </head><body>
+<body class="page-ref-only">
 <div class="top-bar">
   <a class="site-title" href="index.html">Bermuda Wrecks &amp; Reefs</a>
   <div class="nav-links">
@@ -138,7 +191,8 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-hero">
+  <div class="page-frame">
+    <div class="page-hero">
     <div class="page-hero-title">Cathedral Dive Site</div>
     <div class="page-hero-type ref">Reference Only</div>
     <div class="page-hero-summary">Bermuda 100 or .</div>
@@ -146,6 +200,7 @@
   <div class="content-block">
     <div class="content-heading">Description</div>
     <div class="content-text">Bermuda 100 or . he Cathedral is a popular spot for reef diving. Near Gurnet Rock off East End and a favorite for the dive shops at this end of the island, Cathedral is a huge underwater dome with several ‘windows’, where shafts of light penetrate into the gloom, giving a feeling of being inside a vast subterranean cathedral. This is a very popular dive with a high concentration of marine life, including schools of ocean tarpon and snappers. The site is best visited during spring and fall months. It is situated close to the opening of Castle Harbour and features an abundance of caves, canyons and crevices, where crabs and lobsters usually find shelter. If you decide to visit the area during spring months, then you will also see vast schools of colorful parrotfish passing by. The average depth is 32.8 feet (10 meters) and visibility is good. Cathedral is a Bermuda Protected Area. 32°20&#x27;25.62&quot;N, 64°39&#x27;34.56&quot;W 66 to 78 degrees Fahrenheit (19 to 26 degrees Celsius) 39 feet (12 meters)</div>
+  </div>
   </div>
 </div>
 <footer class="footer">

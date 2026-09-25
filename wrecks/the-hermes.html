@@ -113,6 +113,58 @@
     color: #cfd8e6;
     line-height: 1.75;
   }
+  .page-frame {
+    background: #1a1d27;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .page-frame .page-hero {
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+  }
+  .page-frame .source-strip,
+  .page-frame .quick-stats,
+  .page-frame .details-row,
+  .page-frame .content-block {
+    margin-bottom: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .page-frame .source-strip {
+    border-top: 1px solid #2d3140;
+    margin-top: 0;
+  }
+  .page-frame .quick-stats {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .details-row {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .content-block {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .content-block:last-child {
+    border-bottom: 1px solid #2d3140;
+  }
+  .page-ref-only .page-hero {
+    border: none;
+    border-radius: 0;
+  }
+  .page-ref-only .source-strip {
+    border-top: 1px solid #2d3140;
+  }
+  .page-ref-only .content-block {
+    border-top: 1px solid #2d3140;
+    border-bottom: 1px solid #2d3140;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
   footer { margin-top: 24px; }
   @media (max-width: 639px) {
     .page-hero { padding: 20px 16px; }
@@ -128,6 +180,7 @@
 
 </style>
 </head><body>
+<body>
 <div class="top-bar">
   <a class="site-title" href="index.html">Bermuda Wrecks &amp; Reefs</a>
   <div class="nav-links">
@@ -138,7 +191,8 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-hero">
+  <div class="page-frame">
+    <div class="page-hero">
     <div class="page-hero-title">The Hermes</div>
     <div class="page-hero-type">Wreck</div>
     <div class="page-hero-summary">Built in 1943 in Pennsylvania, the Hermes was originally used as a U.</div>
@@ -168,6 +222,7 @@
   <div class="content-block">
     <div class="content-heading">Current Condition</div>
     <div class="content-text">The wreck of the Hermes is one of Bermuda&#x27;s most popular dive sites, located approximately 1.8 km south of Warwick Long Bay Beach and teeming with marine life. She lies almost fully intact and upright on a flat sand bottom in 75 to 80 feet of water against the deep reef after the wreck shifted 200 yards during Hurricane Emily in 1985. (Despite the relocation, the Hermes is still upright, listing only 10 degrees to port side.) Her wheelhouse is just 45 feet from the surface, and underwater visibility is usually very good at around 100 feet most of the year (considered to be one of the best wrecks for visibility in Bermuda waters). Divers can either skirt around the outside of the wreck or penetrate deep within. The engine room and parts of the bridge are easily accessible. Main features include the engines, mast, toilet, wash basin and cargo boom, which used to pick up the buoys. While small, the vessel is popular with divers and photographers because she is completely intact (minus the hatches removed as a safety precaution).</div>
+  </div>
   </div>
 </div>
 <footer class="footer">

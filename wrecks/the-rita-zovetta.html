@@ -113,6 +113,58 @@
     color: #cfd8e6;
     line-height: 1.75;
   }
+  .page-frame {
+    background: #1a1d27;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .page-frame .page-hero {
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+  }
+  .page-frame .source-strip,
+  .page-frame .quick-stats,
+  .page-frame .details-row,
+  .page-frame .content-block {
+    margin-bottom: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .page-frame .source-strip {
+    border-top: 1px solid #2d3140;
+    margin-top: 0;
+  }
+  .page-frame .quick-stats {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .details-row {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .content-block {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .content-block:last-child {
+    border-bottom: 1px solid #2d3140;
+  }
+  .page-ref-only .page-hero {
+    border: none;
+    border-radius: 0;
+  }
+  .page-ref-only .source-strip {
+    border-top: 1px solid #2d3140;
+  }
+  .page-ref-only .content-block {
+    border-top: 1px solid #2d3140;
+    border-bottom: 1px solid #2d3140;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
   footer { margin-top: 24px; }
   @media (max-width: 639px) {
     .page-hero { padding: 20px 16px; }
@@ -128,6 +180,7 @@
 
 </style>
 </head><body>
+<body class="page-ref-only">
 <div class="top-bar">
   <a class="site-title" href="index.html">Bermuda Wrecks &amp; Reefs</a>
   <div class="nav-links">
@@ -138,7 +191,8 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-hero">
+  <div class="page-frame">
+    <div class="page-hero">
     <div class="page-hero-title">The Rita Zovetta</div>
     <div class="page-hero-type ref">Reference Only</div>
     <div class="page-hero-summary">Bermuda 100 or .</div>
@@ -146,6 +200,7 @@
   <div class="content-block">
     <div class="content-heading">Description</div>
     <div class="content-text">Bermuda 100 or . uilt in 1919 by A. Stephen &amp; Sons, Ltd., a Scottish shipyard in Glasgow, this cargo steamer was originally known as the War Gascon and it was outfitted to be a tanker. Two years later, the ship was converted to carry dry cargo and sold to Parodi &amp; Accame of Genoa, Italy, and renamed the Rita Zovetta. Sailing from the port of Poti in Georgia on the Black Sea to Baltimore, Maryland, in 1924, the vessel with a 52-foot beam ran aground in heavy seas at the northeast end of Bermuda just off of St. David’s Lighthouse. There was no loss of life, and most of the cargo of manganese ore was offloaded before the ship sank on February 13, 1924. The ship was later heavily salvaged for non-ferrous scrap metals (brass, copper pipes, etc.) several times after World War II. 32°21&#x27;30.31&quot;N, 64°38&#x27;29.40&quot;W 399 feet (121.6 meters) 5,107 tons 70 feet (21 meters) 500m</div>
+  </div>
   </div>
 </div>
 <footer class="footer">

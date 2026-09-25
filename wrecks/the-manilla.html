@@ -113,6 +113,58 @@
     color: #cfd8e6;
     line-height: 1.75;
   }
+  .page-frame {
+    background: #1a1d27;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .page-frame .page-hero {
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+  }
+  .page-frame .source-strip,
+  .page-frame .quick-stats,
+  .page-frame .details-row,
+  .page-frame .content-block {
+    margin-bottom: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .page-frame .source-strip {
+    border-top: 1px solid #2d3140;
+    margin-top: 0;
+  }
+  .page-frame .quick-stats {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .details-row {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .content-block {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .content-block:last-child {
+    border-bottom: 1px solid #2d3140;
+  }
+  .page-ref-only .page-hero {
+    border: none;
+    border-radius: 0;
+  }
+  .page-ref-only .source-strip {
+    border-top: 1px solid #2d3140;
+  }
+  .page-ref-only .content-block {
+    border-top: 1px solid #2d3140;
+    border-bottom: 1px solid #2d3140;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
   footer { margin-top: 24px; }
   @media (max-width: 639px) {
     .page-hero { padding: 20px 16px; }
@@ -128,6 +180,7 @@
 
 </style>
 </head><body>
+<body class="page-ref-only">
 <div class="top-bar">
   <a class="site-title" href="index.html">Bermuda Wrecks &amp; Reefs</a>
   <div class="nav-links">
@@ -138,7 +191,8 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-hero">
+  <div class="page-frame">
+    <div class="page-hero">
     <div class="page-hero-title">The Manilla</div>
     <div class="page-hero-type ref">Reference Only</div>
     <div class="page-hero-summary">Bermuda 100 or .</div>
@@ -146,6 +200,7 @@
   <div class="content-block">
     <div class="content-heading">Description</div>
     <div class="content-text">Bermuda 100 or . n unknown Dutchman-class ship, dubbed the Manilla by archaeologists, is believed to have run aground in 1753 in what is now the North East Breaker dive area, where it was discovered by Harry Cox. The name derived from manillas – bronze bangles produced in Europe that served as a form of African currency used to purchase slaves from African chieftains. Shipwrecked on the reef, the 18th-century vessel went down just breakers away from the Eagle, a Virginia Company ship wrecked a century earlier in 1659 on the North East Breakers. Much later, in March 1932, the Prince David ran aground close to the Manilla before being refloated. Artifacts recovered from the Manilla have included tiny glass trade beads (see PHOTOS below), stone ginger beer bottles, pottery, glassware, and a quantity of manilla bangles. 32°28&#x27;52.93&quot;N, 64°41&#x27;18.24&quot;W 15 feet (4.5 meters) 300m THE MANILLA OVERVIEW</div>
+  </div>
   </div>
 </div>
 <footer class="footer">

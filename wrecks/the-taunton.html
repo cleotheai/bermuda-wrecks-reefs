@@ -113,6 +113,58 @@
     color: #cfd8e6;
     line-height: 1.75;
   }
+  .page-frame {
+    background: #1a1d27;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .page-frame .page-hero {
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+  }
+  .page-frame .source-strip,
+  .page-frame .quick-stats,
+  .page-frame .details-row,
+  .page-frame .content-block {
+    margin-bottom: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .page-frame .source-strip {
+    border-top: 1px solid #2d3140;
+    margin-top: 0;
+  }
+  .page-frame .quick-stats {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .details-row {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .content-block {
+    border-top: 1px solid #2d3140;
+  }
+  .page-frame .content-block:last-child {
+    border-bottom: 1px solid #2d3140;
+  }
+  .page-ref-only .page-hero {
+    border: none;
+    border-radius: 0;
+  }
+  .page-ref-only .source-strip {
+    border-top: 1px solid #2d3140;
+  }
+  .page-ref-only .content-block {
+    border-top: 1px solid #2d3140;
+    border-bottom: 1px solid #2d3140;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
   footer { margin-top: 24px; }
   @media (max-width: 639px) {
     .page-hero { padding: 20px 16px; }
@@ -128,6 +180,7 @@
 
 </style>
 </head><body>
+<body class="page-ref-only">
 <div class="top-bar">
   <a class="site-title" href="index.html">Bermuda Wrecks &amp; Reefs</a>
   <div class="nav-links">
@@ -138,7 +191,8 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-hero">
+  <div class="page-frame">
+    <div class="page-hero">
     <div class="page-hero-title">The Taunton</div>
     <div class="page-hero-type ref">Reference Only</div>
     <div class="page-hero-summary">Bermuda 100 or .</div>
@@ -146,6 +200,7 @@
   <div class="content-block">
     <div class="content-heading">Description</div>
     <div class="content-text">Bermuda 100 or . uilt in 1902 in Copenhagen by Burmeister &amp; Wain and initially chartered to the United Fruit Company, the steel-hulled cargo steamer, the Taunton, sailed under the Norwegian flag and featured a powerful triple-expansion steam engine. She was carrying a cargo of coal from Norfolk, Virginia to St. George, Bermuda, when she encountered a misty fog at the entrance to the island’s northern passage through the reefs. The captain posted a lookout, but the Taunton fell victim to Bermuda’s northern reefs on November 24, 1920, after running aground on the North East Breaker reef. 32°28&#x27;58.91&quot;N, 64°42&#x27;17.64&quot;W 228 feet (69.5 meters) 75,000 cubic feet (2124 cubic meters) 1,329 tons 40 feet (12.2 meters) 300m</div>
+  </div>
   </div>
 </div>
 <footer class="footer">
