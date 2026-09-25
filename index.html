@@ -5,6 +5,171 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bermuda Wrecks &amp; Reefs</title>
 <link rel="stylesheet" href="styles.css">
+<style>
+  .hero {
+    background: linear-gradient(135deg, #1a1d27 0%, #141720 100%);
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    padding: 32px 24px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+  .hero-subtitle {
+    font-size: 15px;
+    color: #b0bec5;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  .hero-source {
+    font-size: 12px;
+    color: #78909c;
+  }
+  .hero-source a { color: #90caf9; }
+  .section-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #90caf9;
+    font-weight: 700;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #2d3140;
+  }
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #2d3140;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .stat-cell {
+    background: #141720;
+    padding: 16px 12px;
+    text-align: center;
+  }
+  .stat-cell-num {
+    font-size: 28px;
+    font-weight: 700;
+    color: #90caf9;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-cell-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #78909c;
+  }
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .featured-card {
+    background: #1a1d27;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    padding: 16px 18px;
+    text-decoration: none;
+    display: block;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .featured-card:hover {
+    border-color: #0d47a1;
+    background: #1e2130;
+  }
+  .featured-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .featured-card-type {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #90caf9;
+    margin-bottom: 8px;
+  }
+  .featured-card-type.reef { color: #4dd0e1; }
+  .featured-card-desc {
+    font-size: 13px;
+    color: #b0bec5;
+    line-height: 1.55;
+    margin-bottom: 8px;
+  }
+  .featured-card-meta {
+    font-size: 11px;
+    color: #78909c;
+    border-top: 1px solid #2d3140;
+    padding-top: 6px;
+  }
+  .featured-card-meta span { margin-right: 12px; }
+  .site-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1px;
+    background: #2d3140;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .site-list .site-card {
+    background: #1a1d27;
+    border-radius: 0;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.15s;
+  }
+  .site-list .site-card:hover { background: #1e2130; }
+  .site-list .site-card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .site-list .site-card-type {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #90caf9;
+  }
+  .site-list .site-card-type.reef { color: #4dd0e1; }
+  .site-list .site-card-desc {
+    font-size: 12px;
+    color: #78909c;
+    line-height: 1.45;
+    margin-top: 2px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .site-list .site-card-meta {
+    font-size: 10px;
+    color: #546e7a;
+    margin-top: 4px;
+  }
+  footer { margin-top: 32px; }
+  @media (max-width: 639px) {
+    .hero { padding: 24px 16px; }
+    .hero h1 { font-size: 22px; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .featured-grid { grid-template-columns: 1fr; }
+    .site-list { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
 <body>
 <div class="top-bar">
@@ -16,440 +181,324 @@
   <button class="menu-btn">&#9776;</button>
 </div>
 <div class="main">
+
   <div class="hero">
     <h1>Bermuda Wrecks &amp; Reefs</h1>
-    <p class="hero-subtitle">Shipwrecks and reef dive sites of Bermuda — reference data from the UC San Diego Bermuda 100 project</p>
+    <p class="hero-subtitle">Shipwrecks and reef dive sites around Bermuda — reference data from the UC San Diego Bermuda 100 project. Dive the past.</p>
     <p class="hero-source">Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; 35 shipwrecks &middot; 12 reef / dive sites &middot; Compiled 2026-09-24</p>
   </div>
+
+  <div class="stats-bar">
+    <div class="stat-cell">
+      <div class="stat-cell-num">47</div>
+      <div class="stat-cell-label">Total Sites</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-cell-num">35</div>
+      <div class="stat-cell-label">Shipwrecks</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-cell-num">12</div>
+      <div class="stat-cell-label">Reef / Dive Sites</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-cell-num">1609</div>
+      <div class="stat-cell-label">Earliest Wreck (Sea Venture)</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Featured Sites</div>
+    <div class="featured-grid">
+      <a class="featured-card" href="wrecks/the-sea-venture.html">
+        <div class="featured-card-title">The Sea Venture</div>
+        <div class="featured-card-type">Wreck &middot; 1609</div>
+        <div class="featured-card-desc">The flagship of the London Company, bound for Jamestown. Ran aground on Bermuda's reefs in 1609, giving the island its first permanent English settlers.</div>
+        <div class="featured-card-meta"><span>Depth: ~12–18 ft</span><span>Jamestown's survivors</span></div>
+      </a>
+      <a class="featured-card" href="wrecks/the-hermes.html">
+        <div class="featured-card-title">The Hermes</div>
+        <div class="featured-card-type">Wreck &middot; Scuttled 1984</div>
+        <div class="featured-card-desc">A former U.S. Coast Guard buoy tender bought for $1 and scuttled to become an artificial reef. Lies almost fully intact in 75–80 ft near Horseshoe Bay.</div>
+        <div class="featured-card-meta"><span>Depth: 75–80 ft</span><span>One of Bermuda's most popular dives</span></div>
+      </a>
+      <a class="featured-card" href="wrecks/the-constellation.html">
+        <div class="featured-card-title">The Constellation</div>
+        <div class="featured-card-type">Wreck &middot; 1943</div>
+        <div class="featured-card-desc">A four-masted wooden schooner built in 1918, later a cargo vessel and WWII merchant marine ship. Rests in 26–30 ft off the north shore.</div>
+        <div class="featured-card-meta"><span>Depth: 26–30 ft</span><span>1,034 tons</span></div>
+      </a>
+      <a class="featured-card" href="wrecks/the-pollockshields.html">
+        <div class="featured-card-title">The Pollockshields</div>
+        <div class="featured-card-type">Wreck &middot; 1918</div>
+        <div class="featured-card-desc">A German cargo steamer captured by the British in WWI and renamed. Sank in 1918 carrying munitions — she still sits upright in 40 ft off Somerset.</div>
+        <div class="featured-card-meta"><span>Depth: 40 ft</span><span>323 ft long</span></div>
+      </a>
+      <a class="featured-card" href="wrecks/the-montana.html">
+        <div class="featured-card-title">The Montana</div>
+        <div class="featured-card-type">Wreck &middot; 1863</div>
+        <div class="featured-card-desc">A side-paddlewheel steamer and Civil War blockade runner. Sank after hitting a reef in December 1863 off Bermuda's northwest coast. Three previous names: Nola, Gloria, Paramount.</div>
+        <div class="featured-card-meta"><span>Depth: ~42 ft</span><span>750 tons</span></div>
+      </a>
+      <a class="featured-card" href="reefs/north-rock.html">
+        <div class="featured-card-title">North Rock</div>
+        <div class="featured-card-type reef">Reef / Dive Site</div>
+        <div class="featured-card-desc">Bermuda's largest reef preserve, about seven miles from the east end. Crown jewel of the reef system — pink sand, purple sea fans, crystal-clear water from 3 to 30 ft.</div>
+        <div class="featured-card-meta"><span>Depth: 3–30 ft</span><span>70-ft beacon tower</span></div>
+      </a>
+    </div>
+  </div>
+
   <div class="section">
     <div class="section-title">All Sites — 47 documented</div>
     <div class="site-list">
-        <a class="site-card" href="wrecks/iristo-aristo.html">
-          <div class="site-card-header">
-            <span class="site-card-title">Iristo (Aristo)</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . uilt in 1918 in Lorain, Ohio and originally known as the Lake Jessup , the steam freighter with a 43.5-foot beam changed hands several times under different nam...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/lherminie.html">
-          <div class="site-card-header">
-            <span class="site-card-title">L&#x27;Herminie</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . aunched in 1824 but not completed until four years later, Bermuda’s most impressive warship wreck is this first-class, 60-gun French frigate. L&#x27;Herminie was hug...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/mills-breaker-wrecks.html">
-          <div class="site-card-header">
-            <span class="site-card-title">Mills Breaker Wrecks</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . he English iron-hulled cargo sailing vessel, the Beaumarais Castle, was traveling from Calcutta en route to New York when she met her demise on Bermuda’s treach...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/north-rock-shipwrecks.html">
-          <div class="site-card-header">
-            <span class="site-card-title">North Rock Shipwrecks</span>
-            <span><span class="site-card-type">Wreck</span></span>
-          </div>
-          <div class="site-card-desc">North Rock is Bermuda&#x27;s biggest reef preserve and has at least two shipwrecks near it, and perhaps many more, including the ship that brought the first recorded Briton to Bermud...</div>
-          <div class="site-card-meta"><span>Depth: Not specified on the Bermuda 100 page (North Rock reef depths generally range...</span> <span>North Rock — Bermuda&#x27;s biggest reef preserve WB Smith Tug: 32°28&#x27;29.26&quot;N, 64°46&#x27;8.01&quot;W — in the f...</span></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-airplane.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Airplane</span>
-            <span><span class="site-card-type">Wreck</span></span>
-          </div>
-          <div class="site-card-desc">Not all the wrecks surrounding Bermuda are ocean-going vessels. The Airplane wreck site was long considered to be a U.S. B-29 bomber that took off from Bermuda and went down in ...</div>
-          <div class="site-card-meta"><span>Depth: 21 to 25 feet (6 to 7 meters)</span> <span>32°15&#x27;14.59&quot;N, 64°58&#x27;36.48&quot;W — just west of Bermuda. The site is very near to the 1818 wreck of t...</span></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-blanche-king.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Blanche King</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 360 Video Flythrough of Wreckage Area on Sea Floor or . he Blanche King sank in December 1920 en route from Norfolk to Bermuda. It was carrying a cargo of coal when ...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-caeser.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Caeser</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . uilt in 1814 in Durham, the English brigantine, the Caeser, was lost on a reef off the west end of Bermuda on May 17, 1818. En route from Shields, England to Ba...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-caraquet.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Caraquet</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . uilt in 1894 in Belfast, Northern Ireland, this British Mail packet and passenger steamer was originally named the Guelph. She was renamed the Caraquet after th...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-constellation.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Constellation</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . uilt in 1918 by the Frye Flinn Co. in Harrington, Maine, the four-masted, wooden-hulled schooner was originally called the Sally Persis Noyes. She was used as a...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-corinthian.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Corinthian</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 Bermuda 100 Wreck Sites or . riginally built by Shell Oil as an oil tender to service Gulf of Mexico oil rigs, the refitted Niobe Corinthian arrived in Bermuda in 20...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-cristobal-colon.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Cristobal Colon</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . uilt in 1923 by the Sociedad Espanola de Construccion Naval for the Transatlantic Spanish Line, this luxury cruise liner is the largest of Bermuda’s shipwrecks....</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-curlew.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Curlew</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . he iron-hulled, three-masted English steamer sailed the Halifax-Bermuda-St. Thomas route. Three years after the ship was bought by the Cunard Steamship Co., the...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-darlington.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Darlington</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . uilt in 1881 at the Swan &amp; Hunter Shipyard in Newcastle, England, at the dawn of the age of steam-driven ships, the Darlington was a sturdy, iron-hulled steamer...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-forceful.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Forceful</span>
-            <span><span class="site-card-type">Wreck</span></span>
-          </div>
-          <div class="site-card-desc">The Forceful was purposefully sunk in 2009 as part of the Bermuda Intact Wreck Initiative (BIWI), a few days before tropical storm Bertha hit Bermuda. She is the larger of the t...</div>
-          <div class="site-card-meta"><span>Depth: Maximum depth: 60 feet (18</span> <span>32°14&#x27;20.94&quot;N, 64°49&#x27;39.36&quot;W — about half a mile off Bermuda&#x27;s South Shore. The Forceful and the ...</span></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-gleana.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Gleana</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . lso known as “Kevin’s Wreck”, the Gleana was a converted salvage schooner lost by the Lusher Brothers during the salvage of the Minnie Breslauer. The salvage sh...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-hermes.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Hermes</span>
-            <span><span class="site-card-type">Wreck</span></span>
-          </div>
-          <div class="site-card-desc">Built in 1943 in Pennsylvania, the Hermes was originally used as a U.S. Coast Guard buoy tender until the end of World War II. The steel vessel featured a tall mast forward of t...</div>
-          <div class="site-card-meta"><span>Depth: 75–80 feet (23–24</span> <span>32°14&#x27;42.61&quot;N, 64°47&#x27;58.20&quot;W — approximately 1.8 km south of Warwick Long Bay Beach, near Horsesh...</span></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-kate.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Kate</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . uilt in 1874 in Whitby, England, the Kate was an iron-hulled English “Barkantine” rig, or steam freighter. She was en route from Galveston, Texas to Le Havre, F...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-king.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The King</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . uilt in 1941 in South Carolina, the King was a Navy tug boat built in South Carolina and brought to Bermuda for use as a dive and treasure salvage vessel. Donat...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-lartington.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Lartington</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . Built in 1875 in Sunderland, England, this tramp steamer was constructed by the shipbuilders Short Brothers. Tramp steamers used both sail and steam for propuls...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-madiana.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Madiana</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . uilt in 1877 by R. Napier &amp; Sons in Glasgow, the steamship originally known as the Balmoral Castle was a new breed of iron-hulled, transatlantic ship for carryi...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-manilla.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Manilla</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . n unknown Dutchman-class ship, dubbed the Manilla by archaeologists, is believed to have run aground in 1753 in what is now the North East Breaker dive area, wh...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-mary-celestia.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Mary Celestia</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 360 Video Flythrough of Wreckage Area on Sea Floor or . t the time of its sinking in 1864, the Mary-Celestia was barely two years old. It operated as a blockade runn...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-minnie-breslauer.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Minnie Breslauer</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . uilt in 1872, the Minnie Breslauer was a steel-hulled English steam freighter built in Portugal. She left Malaga in early 1873 on her maiden voyage to New York ...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-montana.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Montana</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 360 Video Flythrough of Wreckage Area on Sea Floor or . he side-paddlewheel steamer Montana sank in December 1863 after running into shallow reefs off Bermuda’s nort...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-north-carolina.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The North Carolina</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . uilt in 1876 in Scotland by Macmillan &amp; Son Shipyard, this iron-hulled English barque (a three-masted square rigger), the North Carolina, was owned and operated...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-pelinaion.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Pelinaion</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . uilt in 1907 at Port Glasgow and originally named the Hill Glen, this large cargo steamer with a 50-foot beam changed ownership numerous times before she was pu...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-pollockshields.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Pollockshields</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 Bermuda 100 Wreck Sites or . uilt in 1890 in Hamburg and originally named the Herodot, this large German cargo steamer powered by a 281-horsepower triple-expansion e...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-rita-zovetta.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Rita Zovetta</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . uilt in 1919 by A. Stephen &amp; Sons, Ltd., a Scottish shipyard in Glasgow, this cargo steamer was originally known as the War Gascon and it was outfitted to be a ...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-sea-venture-ferry.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Sea Venture Ferry</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . he Sea Venture Ferry derived its name from the historic wreck (see above), but it is relatively new, and located at the Eastern Blue Cut. While not interesting ...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-sea-venture.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Sea Venture</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 Bermuda 100 Wreck Sites or . uilt and launched in 1609, probably in the Suffolk town of Aldeburgh on the North Sea coast, the Sea Venture was a 17th-century armed, w...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-stonewall.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Stonewall</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . his wooden barque built in the 17th Century remains unidentified, but the site is known as the Stonewall wreck because, when discovered, the ballast stretched a...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-taunton.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Taunton</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . uilt in 1902 in Copenhagen by Burmeister &amp; Wain and initially chartered to the United Fruit Company, the steel-hulled cargo steamer, the Taunton, sailed under t...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-virginia-merchant.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Virginia Merchant</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . he English wooden sailing ship, the Virginia Merchant, was owned by the Virginia Company and under the command of Captain Robert Burke. The ship was carrying 17...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-warwick.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Warwick</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . n November 1619, the English ‘merchantman’ brigantine (galleon?), the Warwick , was preparing to leave Castle Harbour in Bermuda with badly needed supplies dest...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="wrecks/the-xing-da.html">
-          <div class="site-card-header">
-            <span class="site-card-title">The Xing Da</span>
-            <span><span class="site-card-type">Wreck</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . C San Diego faculty, researchers and students are collaborating with Bermuda’s Department of Environment and Natural Resources and LookFoundation (a private edu...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-
-        <a class="site-card" href="reefs/castle-harbour-and-nonsuch-buoy.html">
-          <div class="site-card-header">
-            <span class="site-card-title">Castle Harbour and Nonsuch Buoy</span>
-            <span><span class="site-card-type">Reef / Dive Site</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . ocated at the southeast corner of Bermuda, the Castle Harbour Islands Nature Reserve contains all of the islands and islets lying across the mouth of Castle Har...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="reefs/cathedral-dive-site.html">
-          <div class="site-card-header">
-            <span class="site-card-title">Cathedral Dive Site</span>
-            <span><span class="site-card-type">Reef / Dive Site</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . he Cathedral is a popular spot for reef diving. Near Gurnet Rock off East End and a favorite for the dive shops at this end of the island, Cathedral is a huge u...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="reefs/eastern-blue-cut.html">
-          <div class="site-card-header">
-            <span class="site-card-title">Eastern Blue Cut</span>
-            <span><span class="site-card-type">Reef / Dive Site</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . here are several breaks in the reef or “cuts” around Bermuda. The Eastern Blue Cut is one of the largest such breaks in the reef. The flow of nutrients through ...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="reefs/hangover-hole.html">
-          <div class="site-card-header">
-            <span class="site-card-title">Hangover Hole</span>
-            <span><span class="site-card-type">Reef / Dive Site</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . ike the Gleana wreck nearby, Hangover Hole features exceptional canyons and swim-throughs, as well as a difficult-to-find underwater cave. Because of the diffic...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="reefs/hog-breaker.html">
-          <div class="site-card-header">
-            <span class="site-card-title">Hog Breaker</span>
-            <span><span class="site-card-type">Reef / Dive Site</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . ery close to the wreck of the Caraquet is an open dive site called Hog Breaker. The popular and protected buoyed dive site features great swim-throughs and over...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="reefs/north-east-breaker.html">
-          <div class="site-card-header">
-            <span class="site-card-title">North East Breaker</span>
-            <span><span class="site-card-type">Reef / Dive Site</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . ocated in the protected area around the North East Breaker buoy are what’s left of multiple shipwrecks. In addition to the 18th century Manilla, other wreckage ...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="reefs/north-rock.html">
-          <div class="site-card-header">
-            <span class="site-card-title">North Rock</span>
-            <span><span class="site-card-type">Reef / Dive Site</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . orth Rock is located approximately seven miles from the east end of Bermuda. It is considered one of the crown jewels of Bermuda’s reef system and has arguably ...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="reefs/sandy-hole.html">
-          <div class="site-card-header">
-            <span class="site-card-title">Sandy Hole</span>
-            <span><span class="site-card-type">Reef / Dive Site</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . andy Hole is the solid reef that has stopped many ships dead in the water over the past 400 years. The buoyed dive site is at a depth of 6 to 33 feet (2 to 10 m...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="reefs/shell-city---hammerhead---barracuda.html">
-          <div class="site-card-header">
-            <span class="site-card-title">Shell City / Hammerhead / Barracuda</span>
-            <span><span class="site-card-type">Reef / Dive Site</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . his is a collection of dive sites in the same area that represent shallow, open areas primarily for novice divers or locations for second reef dive. These sites...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="reefs/snake-pit.html">
-          <div class="site-card-header">
-            <span class="site-card-title">Snake Pit</span>
-            <span><span class="site-card-type">Reef / Dive Site</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . his protected dive site is known for a large bowl of pure white sand surrounded by healthy coral patch reef. With incredible visibility on the high tide year ro...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="reefs/south-west-breaker.html">
-          <div class="site-card-header">
-            <span class="site-card-title">South West Breaker</span>
-            <span><span class="site-card-type">Reef / Dive Site</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . outh West Breaker reef is the southern-most breaker reef in Bermuda and a protected buoyed dive site. The breaker is not a coral formation or even a rock format...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
-        <a class="site-card" href="reefs/tarpon-hole.html">
-          <div class="site-card-header">
-            <span class="site-card-title">Tarpon Hole</span>
-            <span><span class="site-card-type">Reef / Dive Site</span><span class="site-card-snippet">Reference only</span></span>
-          </div>
-          <div class="site-card-desc">Bermuda 100 or . he reef at Tarpon Hole is full of massive overhangs, caves, and tunnels. The site hosts large concentrations of tarpon, which at certain times of year can be fo...</div>
-          <div class="site-card-meta"></div>
-        </a>
-
+      <a class="site-card" href="wrecks/iristo-aristo.html">
+        <div class="site-card-title">Iristo (Aristo)</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Steam freighter built in 1918 in Lorain, Ohio. Originally the Lake Jessup. Ran aground on Bermuda's north shore in 1919.</div>
+      </a>
+      <a class="site-card" href="wrecks/lherminie.html">
+        <div class="site-card-title">L'Herminie</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">First-class 60-gun French frigate, launched 1824. One of Bermuda's most impressive warship wrecks — sunk in 1838.</div>
+      </a>
+      <a class="site-card" href="wrecks/mills-breaker-wrecks.html">
+        <div class="site-card-title">Mills Breaker Wrecks</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Multiple wrecks at the Mills Breaker reef site. The Beaumarais Castle, an iron-hulled cargo sailing vessel from Calcutta, was one of them.</div>
+      </a>
+      <a class="site-card" href="wrecks/north-rock-shipwrecks.html">
+        <div class="site-card-title">North Rock Shipwrecks</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">North Rock is Bermuda's biggest reef preserve; at least two shipwrecks lie near it, possibly many more. Includes the ship that brought the first recorded Briton to Bermuda.</div>
+        <div class="site-card-meta">Depth: Not specified</div>
+      </a>
+      <a class="site-card" href="wrecks/the-airplane.html">
+        <div class="site-card-title">The Airplane</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Not all Bermuda wrecks are ships — this site was long thought to be a B-29 bomber that went down after taking off from Bermuda.</div>
+        <div class="site-card-meta">Depth: 21–25 ft</div>
+      </a>
+      <a class="site-card" href="wrecks/the-blanche-king.html">
+        <div class="site-card-title">The Blanche King</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Sank in December 1920 en route from Norfolk to Bermuda with a cargo of coal. Grounded on the reef off the north shore.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-caeser.html">
+        <div class="site-card-title">The Caeser</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">English brigantine built in 1814 in Durham. Lost on a reef off Bermuda's west end on May 17, 1818, en route from Shields, England to Bermuda.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-caraquet.html">
+        <div class="site-card-title">The Caraquet</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">British Mail packet and passenger steamer. Sank June 25, 1923 after hitting rough seas — a strong current pushed her further than the captain calculated.</div>
+        <div class="site-card-meta">Depth: 45 ft &middot; 200 ft long</div>
+      </a>
+      <a class="site-card" href="wrecks/the-constellation.html">
+        <div class="site-card-title">The Constellation</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Four-masted wooden schooner built 1918 in Maine. Originally the Sally Persis Noyes. Later a cruise ship and WWII cargo vessel. Now a shallow wreck off the north shore.</div>
+        <div class="site-card-meta">Depth: 26–30 ft &middot; 1,034 tons</div>
+      </a>
+      <a class="site-card" href="wrecks/the-corinthian.html">
+        <div class="site-card-title">The Corinthian</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Originally built by Shell Oil as an oil tender for Gulf of Mexico rigs. Refitted and arrived in Bermuda in 2009 before sinking.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-cristobal-colon.html">
+        <div class="site-card-title">The Cristobal Colon</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Luxury cruise liner built in 1923 for the Transatlantic Spanish Line. The largest shipwreck in Bermuda waters.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-curlew.html">
+        <div class="site-card-title">The Curlew</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Iron-hulled, three-masted English steamer on the Halifax–Bermuda–St. Thomas route. Sank three years after being bought by Cunard.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-darlington.html">
+        <div class="site-card-title">The Darlington</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Sturdy iron-hulled steamer built in 1881 at Swan &amp; Hunter in Newcastle. Sank in December 1886 on a reef off Bermuda's west end.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-forceful.html">
+        <div class="site-card-title">The Forceful</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Purposefully sunk in 2009 as part of the Bermuda Intact Wreck Initiative. The larger of two BIWI wrecks, sitting in about 60 ft off the south shore.</div>
+        <div class="site-card-meta">Depth: Max 60 ft</div>
+      </a>
+      <a class="site-card" href="wrecks/the-gleana.html">
+        <div class="site-card-title">The Gleana</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Also known as "Kevin's Wreck" — a converted salvage schooner lost by the Lusher Brothers during salvage of the Minnie Breslauer.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-hermes.html">
+        <div class="site-card-title">The Hermes</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Former U.S. Coast Guard buoy tender, bought for $1 and scuttled in 1984. Lies nearly intact in 75–80 ft south of Warwick Long Bay.</div>
+        <div class="site-card-meta">Depth: 75–80 ft &middot; 165 ft long</div>
+      </a>
+      <a class="site-card" href="wrecks/the-kate.html">
+        <div class="site-card-title">The Kate</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Iron-hulled English steam freighter built in 1874 in Whitby. En route from Galveston to Le Havre when she ran aground on Bermuda's north shore.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-king.html">
+        <div class="site-card-title">The King</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Navy tug boat built in 1941 in South Carolina. Brought to Bermuda for dive and treasure salvage work, then donated and scuttled as a dive site.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-lartington.html">
+        <div class="site-card-title">The Lartington</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Tramp steamer built in 1875 in Sunderland, England, by Short Brothers. Used both sail and steam. Ran aground on Bermuda's north shore.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-madiana.html">
+        <div class="site-card-title">The Madiana</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Steamship built in 1877 by R. Napier &amp; Sons in Glasgow. Originally the Balmoral Castle — an iron-hulled transatlantic liner for passengers and mail.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-manilla.html">
+        <div class="site-card-title">The Manilla</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Unknown Dutchman-class ship, dubbed "the Manilla" by archaeologists. Believed to have run aground in 1753 at what is now North East Breaker.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-mary-celestia.html">
+        <div class="site-card-title">The Mary Celestia</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Blockade runner that sank in 1864 at age two. Operated out of Bermuda during the U.S. Civil War. One of the most famous Bermuda wrecks.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-minnie-breslauer.html">
+        <div class="site-card-title">The Minnie Breslauer</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Steel-hulled English steam freighter built in 1872 in Portugal. Left Malaga in early 1873 on her maiden voyage to New York — never made it.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-montana.html">
+        <div class="site-card-title">The Montana</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Side-paddlewheel steamer and Civil War blockade runner. Sank December 1863 on Bermuda's northwest reefs. Previously named Nola, Gloria, and Paramount.</div>
+        <div class="site-card-meta">Depth: ~42 ft &middot; 750 tons</div>
+      </a>
+      <a class="site-card" href="wrecks/the-north-carolina.html">
+        <div class="site-card-title">The North Carolina</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Iron-hulled three-masted square-rigger built in 1876 in Scotland. Owned and operated for the North Carolina — a Bermudian-owned vessel running goods between Bermuda and New York.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-pelinaion.html">
+        <div class="site-card-title">The Pelinaion</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Large cargo steamer built in 1907 at Port Glasgow, originally named Hill Glen. Changed ownership many times before being scuttled as an artificial reef in 1915.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-pollockshields.html">
+        <div class="site-card-title">The Pollockshields</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">German cargo steamer built in 1890 in Hamburg. Captured by the British in WWI and renamed. Sank in 1918 carrying munitions — sits upright in 40 ft off Somerset.</div>
+        <div class="site-card-meta">Depth: 40 ft &middot; 323 ft long</div>
+      </a>
+      <a class="site-card" href="wrecks/the-rita-zovetta.html">
+        <div class="site-card-title">The Rita Zovetta</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Cargo steamer built in 1919 in Glasgow, originally the War Gascon. Outfitted to carry war supplies before being sold and renamed. Sank in Bermuda in 1920.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-sea-venture-ferry.html">
+        <div class="site-card-title">The Sea Venture Ferry</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">A modern ferry boat named after the 1609 Sea Venture wreck. Relatively new, located at Eastern Blue Cut — not as interesting as the original, but a dive site nonetheless.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-sea-venture.html">
+        <div class="site-card-title">The Sea Venture</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">17th-century armed merchantman, built 1609 in Suffolk, England. Flagship of the London Company bound for Jamestown. Ran aground in Bermuda in 1609 — survivors founded the first English settlement.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-stonewall.html">
+        <div class="site-card-title">The Stonewall</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Unidentified 17th-century wooden barque. Named for the stone ballast that stretched across the seabed when first discovered by divers.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-taunton.html">
+        <div class="site-card-title">The Taunton</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Steel-hulled cargo steamer built in 1902 in Copenhagen. Chartered to United Fruit Company. Sank in Bermuda waters after running aground.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-virginia-merchant.html">
+        <div class="site-card-title">The Virginia Merchant</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">English wooden sailing ship owned by the Virginia Company, under Captain Robert Burke. Carrying 17th-century supplies when it ran aground in Bermuda in 1619.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-warwick.html">
+        <div class="site-card-title">The Warwick</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">English merchantman brigantine, preparing to leave Castle Harbour in November 1619 with badly needed supplies for Jamestown. Sank in a hurricane.</div>
+      </a>
+      <a class="site-card" href="wrecks/the-xing-da.html">
+        <div class="site-card-title">The Xing Da</div>
+        <div class="site-card-type">Wreck</div>
+        <div class="site-card-desc">Modern fishing vessel. UC San Diego faculty, researchers, and students collaborate with Bermuda's Department of Environment and Natural Resources on this site.</div>
+      </a>
+      <a class="site-card" href="reefs/castle-harbour-and-nonsuch-buoy.html">
+        <div class="site-card-title">Castle Harbour and Nonsuch Buoy</div>
+        <div class="site-card-type reef">Reef</div>
+        <div class="site-card-desc">Southeast corner of Bermuda. The Castle Harbour Islands Nature Reserve contains all islands and islets across the mouth of Castle Harbour.</div>
+      </a>
+      <a class="site-card" href="reefs/cathedral-dive-site.html">
+        <div class="site-card-title">Cathedral Dive Site</div>
+        <div class="site-card-type reef">Reef</div>
+        <div class="site-card-desc">Popular reef dive near Gurnet Rock off the East End. A huge underwater arch — a favourite of the dive shops at this end of the island.</div>
+      </a>
+      <a class="site-card" href="reefs/eastern-blue-cut.html">
+        <div class="site-card-title">Eastern Blue Cut</div>
+        <div class="site-card-type reef">Reef</div>
+        <div class="site-card-desc">One of the largest "cuts" or breaks in Bermuda's reef. Nutrient flow through the cut attracts fish and marine life year-round.</div>
+      </a>
+      <a class="site-card" href="reefs/hangover-hole.html">
+        <div class="site-card-title">Hangover Hole</div>
+        <div class="site-card-type reef">Reef</div>
+        <div class="site-card-desc">Exceptional canyons, swim-throughs, and a hard-to-find underwater cave. Nearby the Gleana wreck. Challenging — not for novice divers.</div>
+      </a>
+      <a class="site-card" href="reefs/hog-breaker.html">
+        <div class="site-card-title">Hog Breaker</div>
+        <div class="site-card-type reef">Reef</div>
+        <div class="site-card-desc">Open dive site close to the Caraquet wreck. Protected and buoyed, with great swim-throughs and overhangs. Popular with divers.</div>
+      </a>
+      <a class="site-card" href="reefs/north-east-breaker.html">
+        <div class="site-card-title">North East Breaker</div>
+        <div class="site-card-type reef">Reef</div>
+        <div class="site-card-desc">Protected area around the North East Breaker buoy. What's left of multiple shipwrecks — including the 18th-century Manilla — lies scattered across the site.</div>
+      </a>
+      <a class="site-card" href="reefs/north-rock.html">
+        <div class="site-card-title">North Rock</div>
+        <div class="site-card-type reef">Reef</div>
+        <div class="site-card-desc">About seven miles from the east end of Bermuda. One of the crown jewels of the reef system — coarse pink sand, coral, purple sea fans, and crystal-clear water from 3 to 30 ft.</div>
+        <div class="site-card-meta">Depth: 3–30 ft</div>
+      </a>
+      <a class="site-card" href="reefs/sandy-hole.html">
+        <div class="site-card-title">Sandy Hole</div>
+        <div class="site-card-type reef">Reef</div>
+        <div class="site-card-desc">The solid reef that has stopped many ships dead in the water over 400 years. Buoyed dive site, depth 6 to 33 ft.</div>
+      </a>
+      <a class="site-card" href="reefs/shell-city---hammerhead---barracuda.html">
+        <div class="site-card-title">Shell City / Hammerhead / Barracuda</div>
+        <div class="site-card-type reef">Reef</div>
+        <div class="site-card-desc">Collection of shallow dive sites in the same area — open areas for novice divers and second-reef dives. Named for the marine life that hangs out there.</div>
+      </a>
+      <a class="site-card" href="reefs/snake-pit.html">
+        <div class="site-card-title">Snake Pit</div>
+        <div class="site-card-type reef">Reef</div>
+        <div class="site-card-desc">Protected dive site with a large bowl of pure white sand surrounded by healthy coral patch reef. Incredible visibility on the high tide, year-round.</div>
+      </a>
+      <a class="site-card" href="reefs/south-west-breaker.html">
+        <div class="site-card-title">South West Breaker</div>
+        <div class="site-card-type reef">Reef</div>
+        <div class="site-card-desc">Southern-most breaker reef in Bermuda, a protected buoyed dive site. Not a coral formation or rock — a chunk of coral-encrusted rock jutting from the sea floor.</div>
+      </a>
+      <a class="site-card" href="reefs/tarpon-hole.html">
+        <div class="site-card-title">Tarpon Hole</div>
+        <div class="site-card-type reef">Reef</div>
+        <div class="site-card-desc">Reef full of massive overhangs, caves, and tunnels. Hosts large concentrations of tarpon — at certain times of year they can be seen schooling here.</div>
+      </a>
     </div>
   </div>
+
 </div>
 <footer class="footer">
   <p>Bermuda Wrecks &amp; Reefs &middot; Reference data from <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-24</p>
