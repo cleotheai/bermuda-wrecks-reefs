@@ -147,17 +147,14 @@
   .page-frame .content-block {
     border-top: 1px solid #2d3140;
   }
-  .page-frame .content-block:last-child {
-    border-bottom: 1px solid #2d3140;
-  }
-  .page-ref-only .page-hero {
+  .page-frame[data-ref="true"] .page-hero {
     border: none;
     border-radius: 0;
   }
-  .page-ref-only .source-strip {
+  .page-frame[data-ref="true"] .source-strip {
     border-top: 1px solid #2d3140;
   }
-  .page-ref-only .content-block {
+  .page-frame[data-ref="true"] .content-block {
     border-top: 1px solid #2d3140;
     border-bottom: 1px solid #2d3140;
     border-left: none;
@@ -191,7 +188,7 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-frame">
+  <div class="page-frame" data-type="reef-/-dive-site" data-ref="true">
     <div class="page-hero">
     <div class="page-hero-title">Snake Pit</div>
     <div class="page-hero-type ref">Reference Only</div>
@@ -202,10 +199,10 @@
     <div class="content-text">Bermuda 100 or . his protected dive site is known for a large bowl of pure white sand surrounded by healthy coral patch reef. With incredible visibility on the high tide year round, the site got its name from the small habitat of grass eels that can sometimes be seen in one edge of the sand bowl by the patient diver – a collection of small ‘snakes’ emerging from the sand (which can initially look like a bed of fine sea grass). The Snake Pit makes for a great dive for anyone visiting the northern shipwrecks, and because of its large enclosed bowl shape, it appeals to divers interested in night dives. As it is just off the North Channel, experienced pilots and dive shops can reach the site in the evening and return to Bermuda in the dark without running into reef by following the marked channel. 32°26&#x27;25.80&quot;N, 64°50&#x27;8.88&quot;W 40 feet (12.2 meters) 600m</div>
   </div>
   </div>
-</div>
 <footer class="footer">
   <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-25</p>
 </footer>
+</div>
 
 <script>
 document.querySelector('.menu-btn')?.addEventListener('click', function() {

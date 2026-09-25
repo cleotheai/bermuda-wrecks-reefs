@@ -147,17 +147,14 @@
   .page-frame .content-block {
     border-top: 1px solid #2d3140;
   }
-  .page-frame .content-block:last-child {
-    border-bottom: 1px solid #2d3140;
-  }
-  .page-ref-only .page-hero {
+  .page-frame[data-ref="true"] .page-hero {
     border: none;
     border-radius: 0;
   }
-  .page-ref-only .source-strip {
+  .page-frame[data-ref="true"] .source-strip {
     border-top: 1px solid #2d3140;
   }
-  .page-ref-only .content-block {
+  .page-frame[data-ref="true"] .content-block {
     border-top: 1px solid #2d3140;
     border-bottom: 1px solid #2d3140;
     border-left: none;
@@ -191,7 +188,7 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-frame">
+  <div class="page-frame" data-type="wreck" data-ref="true">
     <div class="page-hero">
     <div class="page-hero-title">L&#x27;Herminie</div>
     <div class="page-hero-type ref">Reference Only</div>
@@ -202,10 +199,10 @@
     <div class="content-text">Bermuda 100 or . aunched in 1824 but not completed until four years later, Bermuda’s most impressive warship wreck is this first-class, 60-gun French frigate. L&#x27;Herminie was huge for a naval warship of her day, at 300 feet long and carrying 60 cannons, and she was one of the last frigates built before the shift to auxiliary steam power in French warships. L’Herminie was one of eight frigates designed by Martin Boucher in 1823 and designated as a La Surveillante-class warship – built to carry 30 French 30-pounder cannons and 30 other guns. 32°19&#x27;8.29&quot;N, 64°58&#x27;33.96&quot;W 300 feet (91.4 meters) 35 feet (10.7 meters) 300m</div>
   </div>
   </div>
-</div>
 <footer class="footer">
   <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-25</p>
 </footer>
+</div>
 
 <script>
 document.querySelector('.menu-btn')?.addEventListener('click', function() {

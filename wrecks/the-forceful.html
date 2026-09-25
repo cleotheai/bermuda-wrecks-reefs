@@ -147,17 +147,14 @@
   .page-frame .content-block {
     border-top: 1px solid #2d3140;
   }
-  .page-frame .content-block:last-child {
-    border-bottom: 1px solid #2d3140;
-  }
-  .page-ref-only .page-hero {
+  .page-frame[data-ref="true"] .page-hero {
     border: none;
     border-radius: 0;
   }
-  .page-ref-only .source-strip {
+  .page-frame[data-ref="true"] .source-strip {
     border-top: 1px solid #2d3140;
   }
-  .page-ref-only .content-block {
+  .page-frame[data-ref="true"] .content-block {
     border-top: 1px solid #2d3140;
     border-bottom: 1px solid #2d3140;
     border-left: none;
@@ -191,7 +188,7 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-frame">
+  <div class="page-frame" data-type="wreck">
     <div class="page-hero">
     <div class="page-hero-title">The Forceful</div>
     <div class="page-hero-type">Wreck</div>
@@ -219,10 +216,10 @@
     <div class="content-text">The Forceful and the King tug boats are intact and lay within approximately 100 yards of each other on the seabed about half a mile off Bermuda&#x27;s South Shore, separated by a pristine sandhole where sunrise talons and live helmet conch can sometimes be seen.</div>
   </div>
   </div>
-</div>
 <footer class="footer">
   <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-25</p>
 </footer>
+</div>
 
 <script>
 document.querySelector('.menu-btn')?.addEventListener('click', function() {

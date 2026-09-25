@@ -147,17 +147,14 @@
   .page-frame .content-block {
     border-top: 1px solid #2d3140;
   }
-  .page-frame .content-block:last-child {
-    border-bottom: 1px solid #2d3140;
-  }
-  .page-ref-only .page-hero {
+  .page-frame[data-ref="true"] .page-hero {
     border: none;
     border-radius: 0;
   }
-  .page-ref-only .source-strip {
+  .page-frame[data-ref="true"] .source-strip {
     border-top: 1px solid #2d3140;
   }
-  .page-ref-only .content-block {
+  .page-frame[data-ref="true"] .content-block {
     border-top: 1px solid #2d3140;
     border-bottom: 1px solid #2d3140;
     border-left: none;
@@ -191,7 +188,7 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-frame">
+  <div class="page-frame" data-type="wreck" data-ref="true">
     <div class="page-hero">
     <div class="page-hero-title">The North Carolina</div>
     <div class="page-hero-type ref">Reference Only</div>
@@ -202,10 +199,10 @@
     <div class="content-text">Bermuda 100 or . uilt in 1876 in Scotland by Macmillan &amp; Son Shipyard, this iron-hulled English barque (a three-masted square rigger), the North Carolina, was owned and operated by Patton, Vickers and Co. of Liverpool. The sailing ship was en route from Baltimore to Liverpool in winter 1879 with a general cargo of cotton, bark and fuel when it became clear that her rudder was damaged. On November 21, the ship took a detour to Bermuda for maintenance. After repairs, the North Carolina left St. George’s Harbour on December 30, promptly running aground on a western reef on January 1, 1880. Later, on January 27, an attempt by Captain Alexander Buchan to refloat the ship ended in disaster. The anchor broke free and crashed through the hull, tearing a huge hole and sending the vessel straight to the seabed. 32°15&#x27;41.87&quot;N, 64°57&#x27;32.76&quot;W 205 feet (62.5 meters) 533 tons 45 feet (13.7 meters) 300m</div>
   </div>
   </div>
-</div>
 <footer class="footer">
   <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-25</p>
 </footer>
+</div>
 
 <script>
 document.querySelector('.menu-btn')?.addEventListener('click', function() {

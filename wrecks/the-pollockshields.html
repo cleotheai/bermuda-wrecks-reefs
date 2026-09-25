@@ -147,17 +147,14 @@
   .page-frame .content-block {
     border-top: 1px solid #2d3140;
   }
-  .page-frame .content-block:last-child {
-    border-bottom: 1px solid #2d3140;
-  }
-  .page-ref-only .page-hero {
+  .page-frame[data-ref="true"] .page-hero {
     border: none;
     border-radius: 0;
   }
-  .page-ref-only .source-strip {
+  .page-frame[data-ref="true"] .source-strip {
     border-top: 1px solid #2d3140;
   }
-  .page-ref-only .content-block {
+  .page-frame[data-ref="true"] .content-block {
     border-top: 1px solid #2d3140;
     border-bottom: 1px solid #2d3140;
     border-left: none;
@@ -191,7 +188,7 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-frame">
+  <div class="page-frame" data-type="wreck" data-ref="true">
     <div class="page-hero">
     <div class="page-hero-title">The Pollockshields</div>
     <div class="page-hero-type ref">Reference Only</div>
@@ -202,10 +199,10 @@
     <div class="content-text">Bermuda 100 Bermuda 100 Wreck Sites or . uilt in 1890 in Hamburg and originally named the Herodot, this large German cargo steamer powered by a 281-horsepower triple-expansion engine was sold in 1904 to the Hamburg America Line and renamed the Graecia. When World War I broke out, the ship was outfitted as a German naval supply vessel and sailed from New York to the Azores in August 1914. The following October, the vessel was captured by the H.M.S. Argonaut. The British Government renamed her the Pollockshields, for use as a munitions carrier. 32°16&#x27;17.00&quot;N, 64°46&#x27;11.00&quot;W 323 feet (98.5 meters) 2,744 tons 40 feet (12 meters)</div>
   </div>
   </div>
-</div>
 <footer class="footer">
   <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-25</p>
 </footer>
+</div>
 
 <script>
 document.querySelector('.menu-btn')?.addEventListener('click', function() {

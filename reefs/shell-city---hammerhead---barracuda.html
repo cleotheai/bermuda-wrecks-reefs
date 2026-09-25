@@ -147,17 +147,14 @@
   .page-frame .content-block {
     border-top: 1px solid #2d3140;
   }
-  .page-frame .content-block:last-child {
-    border-bottom: 1px solid #2d3140;
-  }
-  .page-ref-only .page-hero {
+  .page-frame[data-ref="true"] .page-hero {
     border: none;
     border-radius: 0;
   }
-  .page-ref-only .source-strip {
+  .page-frame[data-ref="true"] .source-strip {
     border-top: 1px solid #2d3140;
   }
-  .page-ref-only .content-block {
+  .page-frame[data-ref="true"] .content-block {
     border-top: 1px solid #2d3140;
     border-bottom: 1px solid #2d3140;
     border-left: none;
@@ -191,7 +188,7 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-frame">
+  <div class="page-frame" data-type="reef-/-dive-site" data-ref="true">
     <div class="page-hero">
     <div class="page-hero-title">Shell City / Hammerhead / Barracuda</div>
     <div class="page-hero-type ref">Reference Only</div>
@@ -202,10 +199,10 @@
     <div class="content-text">Bermuda 100 or . his is a collection of dive sites in the same area that represent shallow, open areas primarily for novice divers or locations for second reef dive. These sites are considered easy to navigate with largely clear water, sand holes and reefs for diving. Collectively the depths of these dive sites range from 10 to 25 feet of water. Shell City is a Bermuda Protected Area, while Hammerhead and Barracuda are both open buoy wreck sites. The sites are variably in between 10 and 25 feet of water. Navigating to and in between these sites requires attentive navigation and takes some experience as there are many visible and blind breakers in the area. 32°14&#x27;51.36&quot;N, 64°49&#x27;22.08&quot;W 32°14&#x27;38.29&quot;N, 64°49&#x27;29.64&quot;W 32°14&#x27;39.66&quot;N, 64°49&#x27;43.68&quot;W : 25 feet (7.6 meters)</div>
   </div>
   </div>
-</div>
 <footer class="footer">
   <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-25</p>
 </footer>
+</div>
 
 <script>
 document.querySelector('.menu-btn')?.addEventListener('click', function() {

@@ -147,17 +147,14 @@
   .page-frame .content-block {
     border-top: 1px solid #2d3140;
   }
-  .page-frame .content-block:last-child {
-    border-bottom: 1px solid #2d3140;
-  }
-  .page-ref-only .page-hero {
+  .page-frame[data-ref="true"] .page-hero {
     border: none;
     border-radius: 0;
   }
-  .page-ref-only .source-strip {
+  .page-frame[data-ref="true"] .source-strip {
     border-top: 1px solid #2d3140;
   }
-  .page-ref-only .content-block {
+  .page-frame[data-ref="true"] .content-block {
     border-top: 1px solid #2d3140;
     border-bottom: 1px solid #2d3140;
     border-left: none;
@@ -191,7 +188,7 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-frame">
+  <div class="page-frame" data-type="wreck" data-ref="true">
     <div class="page-hero">
     <div class="page-hero-title">The Taunton</div>
     <div class="page-hero-type ref">Reference Only</div>
@@ -202,10 +199,10 @@
     <div class="content-text">Bermuda 100 or . uilt in 1902 in Copenhagen by Burmeister &amp; Wain and initially chartered to the United Fruit Company, the steel-hulled cargo steamer, the Taunton, sailed under the Norwegian flag and featured a powerful triple-expansion steam engine. She was carrying a cargo of coal from Norfolk, Virginia to St. George, Bermuda, when she encountered a misty fog at the entrance to the island’s northern passage through the reefs. The captain posted a lookout, but the Taunton fell victim to Bermuda’s northern reefs on November 24, 1920, after running aground on the North East Breaker reef. 32°28&#x27;58.91&quot;N, 64°42&#x27;17.64&quot;W 228 feet (69.5 meters) 75,000 cubic feet (2124 cubic meters) 1,329 tons 40 feet (12.2 meters) 300m</div>
   </div>
   </div>
-</div>
 <footer class="footer">
   <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-25</p>
 </footer>
+</div>
 
 <script>
 document.querySelector('.menu-btn')?.addEventListener('click', function() {

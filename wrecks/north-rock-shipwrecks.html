@@ -147,17 +147,14 @@
   .page-frame .content-block {
     border-top: 1px solid #2d3140;
   }
-  .page-frame .content-block:last-child {
-    border-bottom: 1px solid #2d3140;
-  }
-  .page-ref-only .page-hero {
+  .page-frame[data-ref="true"] .page-hero {
     border: none;
     border-radius: 0;
   }
-  .page-ref-only .source-strip {
+  .page-frame[data-ref="true"] .source-strip {
     border-top: 1px solid #2d3140;
   }
-  .page-ref-only .content-block {
+  .page-frame[data-ref="true"] .content-block {
     border-top: 1px solid #2d3140;
     border-bottom: 1px solid #2d3140;
     border-left: none;
@@ -191,7 +188,7 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-frame">
+  <div class="page-frame" data-type="wreck">
     <div class="page-hero">
     <div class="page-hero-title">North Rock Shipwrecks</div>
     <div class="page-hero-type">Wreck</div>
@@ -221,10 +218,10 @@
     <div class="content-text">The remains of the WB Smith Tug can be found in the first sand hole to the south of the beacon, directly under and adjacent to a small blind breaker. In and above the sand, metal parts of the vessel are visible, along with what appears to be some sheathing and iron struts as well as metal fitting, pipes, etc. As expected (in a dynamic area), very little timber can be found apart from some small pieces in evidence. There is a small hand water pump in the sand hole. The primary evidence of the Crystal Catfish today is her lead keel, a testament to the dynamic environment that North Rock confronts. The lead ballast from the ship remains on the northern side of the beacon. The North Rock site is buoyed with a 1km no-fishing limitation. It is a very popular dive and snorkeling site with stunning clear water, extremely healthy hard and soft corals and sand with large pink elements. The area is pristine and used by marine scientists as a control site for a wide range of studies.</div>
   </div>
   </div>
-</div>
 <footer class="footer">
   <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-25</p>
 </footer>
+</div>
 
 <script>
 document.querySelector('.menu-btn')?.addEventListener('click', function() {

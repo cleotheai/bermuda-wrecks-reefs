@@ -147,17 +147,14 @@
   .page-frame .content-block {
     border-top: 1px solid #2d3140;
   }
-  .page-frame .content-block:last-child {
-    border-bottom: 1px solid #2d3140;
-  }
-  .page-ref-only .page-hero {
+  .page-frame[data-ref="true"] .page-hero {
     border: none;
     border-radius: 0;
   }
-  .page-ref-only .source-strip {
+  .page-frame[data-ref="true"] .source-strip {
     border-top: 1px solid #2d3140;
   }
-  .page-ref-only .content-block {
+  .page-frame[data-ref="true"] .content-block {
     border-top: 1px solid #2d3140;
     border-bottom: 1px solid #2d3140;
     border-left: none;
@@ -191,7 +188,7 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-frame">
+  <div class="page-frame" data-type="wreck" data-ref="true">
     <div class="page-hero">
     <div class="page-hero-title">The Manilla</div>
     <div class="page-hero-type ref">Reference Only</div>
@@ -202,10 +199,10 @@
     <div class="content-text">Bermuda 100 or . n unknown Dutchman-class ship, dubbed the Manilla by archaeologists, is believed to have run aground in 1753 in what is now the North East Breaker dive area, where it was discovered by Harry Cox. The name derived from manillas – bronze bangles produced in Europe that served as a form of African currency used to purchase slaves from African chieftains. Shipwrecked on the reef, the 18th-century vessel went down just breakers away from the Eagle, a Virginia Company ship wrecked a century earlier in 1659 on the North East Breakers. Much later, in March 1932, the Prince David ran aground close to the Manilla before being refloated. Artifacts recovered from the Manilla have included tiny glass trade beads (see PHOTOS below), stone ginger beer bottles, pottery, glassware, and a quantity of manilla bangles. 32°28&#x27;52.93&quot;N, 64°41&#x27;18.24&quot;W 15 feet (4.5 meters) 300m THE MANILLA OVERVIEW</div>
   </div>
   </div>
-</div>
 <footer class="footer">
   <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-25</p>
 </footer>
+</div>
 
 <script>
 document.querySelector('.menu-btn')?.addEventListener('click', function() {

@@ -147,17 +147,14 @@
   .page-frame .content-block {
     border-top: 1px solid #2d3140;
   }
-  .page-frame .content-block:last-child {
-    border-bottom: 1px solid #2d3140;
-  }
-  .page-ref-only .page-hero {
+  .page-frame[data-ref="true"] .page-hero {
     border: none;
     border-radius: 0;
   }
-  .page-ref-only .source-strip {
+  .page-frame[data-ref="true"] .source-strip {
     border-top: 1px solid #2d3140;
   }
-  .page-ref-only .content-block {
+  .page-frame[data-ref="true"] .content-block {
     border-top: 1px solid #2d3140;
     border-bottom: 1px solid #2d3140;
     border-left: none;
@@ -191,7 +188,7 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-frame">
+  <div class="page-frame" data-type="reef-/-dive-site" data-ref="true">
     <div class="page-hero">
     <div class="page-hero-title">Cathedral Dive Site</div>
     <div class="page-hero-type ref">Reference Only</div>
@@ -202,10 +199,10 @@
     <div class="content-text">Bermuda 100 or . he Cathedral is a popular spot for reef diving. Near Gurnet Rock off East End and a favorite for the dive shops at this end of the island, Cathedral is a huge underwater dome with several ‘windows’, where shafts of light penetrate into the gloom, giving a feeling of being inside a vast subterranean cathedral. This is a very popular dive with a high concentration of marine life, including schools of ocean tarpon and snappers. The site is best visited during spring and fall months. It is situated close to the opening of Castle Harbour and features an abundance of caves, canyons and crevices, where crabs and lobsters usually find shelter. If you decide to visit the area during spring months, then you will also see vast schools of colorful parrotfish passing by. The average depth is 32.8 feet (10 meters) and visibility is good. Cathedral is a Bermuda Protected Area. 32°20&#x27;25.62&quot;N, 64°39&#x27;34.56&quot;W 66 to 78 degrees Fahrenheit (19 to 26 degrees Celsius) 39 feet (12 meters)</div>
   </div>
   </div>
-</div>
 <footer class="footer">
   <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-25</p>
 </footer>
+</div>
 
 <script>
 document.querySelector('.menu-btn')?.addEventListener('click', function() {

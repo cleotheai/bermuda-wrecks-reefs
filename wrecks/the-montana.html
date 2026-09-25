@@ -147,17 +147,14 @@
   .page-frame .content-block {
     border-top: 1px solid #2d3140;
   }
-  .page-frame .content-block:last-child {
-    border-bottom: 1px solid #2d3140;
-  }
-  .page-ref-only .page-hero {
+  .page-frame[data-ref="true"] .page-hero {
     border: none;
     border-radius: 0;
   }
-  .page-ref-only .source-strip {
+  .page-frame[data-ref="true"] .source-strip {
     border-top: 1px solid #2d3140;
   }
-  .page-ref-only .content-block {
+  .page-frame[data-ref="true"] .content-block {
     border-top: 1px solid #2d3140;
     border-bottom: 1px solid #2d3140;
     border-left: none;
@@ -191,7 +188,7 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-frame">
+  <div class="page-frame" data-type="wreck" data-ref="true">
     <div class="page-hero">
     <div class="page-hero-title">The Montana</div>
     <div class="page-hero-type ref">Reference Only</div>
@@ -202,10 +199,10 @@
     <div class="content-text">Bermuda 100 360 Video Flythrough of Wreckage Area on Sea Floor or . he side-paddlewheel steamer Montana sank in December 1863 after running into shallow reefs off Bermuda’s northwest coast. Like the Mary-Celestia, the Montana was a blockade runner between England, Bermuda and North Carolina. The sailing ship carried contraband goods, including arms, to and from the Confederacy during the Civil War. The vessel went by three previous names – Nola, Gloria and Paramount – before finishing as the Montana. The ship frequently out-ran Union gunboats that couldn’t keep up with the sleek steamer. 32.21&#x27;.663N, 64.54&#x27;.793W 1860 in Glasgow, Scotland 72 meters (236 feet) / 42 feet 750 tons 12 meters / 15 knots 300m MONTANA DETAIL 1 MONTANA DETAIL 2 MONTANA DETAIL 3 MONTANA DETAIL 4</div>
   </div>
   </div>
-</div>
 <footer class="footer">
   <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-25</p>
 </footer>
+</div>
 
 <script>
 document.querySelector('.menu-btn')?.addEventListener('click', function() {

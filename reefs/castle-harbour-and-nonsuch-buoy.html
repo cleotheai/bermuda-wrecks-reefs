@@ -147,17 +147,14 @@
   .page-frame .content-block {
     border-top: 1px solid #2d3140;
   }
-  .page-frame .content-block:last-child {
-    border-bottom: 1px solid #2d3140;
-  }
-  .page-ref-only .page-hero {
+  .page-frame[data-ref="true"] .page-hero {
     border: none;
     border-radius: 0;
   }
-  .page-ref-only .source-strip {
+  .page-frame[data-ref="true"] .source-strip {
     border-top: 1px solid #2d3140;
   }
-  .page-ref-only .content-block {
+  .page-frame[data-ref="true"] .content-block {
     border-top: 1px solid #2d3140;
     border-bottom: 1px solid #2d3140;
     border-left: none;
@@ -191,7 +188,7 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="page-frame">
+  <div class="page-frame" data-type="reef-/-dive-site" data-ref="true">
     <div class="page-hero">
     <div class="page-hero-title">Castle Harbour and Nonsuch Buoy</div>
     <div class="page-hero-type ref">Reference Only</div>
@@ -202,10 +199,10 @@
     <div class="content-text">Bermuda 100 or . ocated at the southeast corner of Bermuda, the Castle Harbour Islands Nature Reserve contains all of the islands and islets lying across the mouth of Castle Harbour between Tuckers Town and Cooper&#x27;s Island. This includes Nonsuch Island, Southampton Island, Charles Island, Castle Island and a number of smaller rocks and islets. The Castle Harbour Islands contain many of Bermuda&#x27;s critically endangered endemic species such as the Bermuda skink and cahow (Bermuda petrel). The Castle Harbour Islands have also been recognized by BirdLife International as an Important Bird Area (IBA) for the Caribbean. For these reasons, public access to the islands is strictly controlled. 32°20&#x27;24.97&quot;N, 64°40&#x27;29.28&quot;W 32°20&#x27;48.01&quot;N, 64°40&#x27;1.56&quot;W 45 feet (13.7 meters)</div>
   </div>
   </div>
-</div>
 <footer class="footer">
   <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-25</p>
 </footer>
+</div>
 
 <script>
 document.querySelector('.menu-btn')?.addEventListener('click', function() {
