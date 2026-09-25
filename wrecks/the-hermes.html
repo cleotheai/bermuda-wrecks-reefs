@@ -3,6 +3,130 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Hermes — Bermuda Wrecks &amp; Reefs</title>
 <link rel="stylesheet" href="styles.css">
+<style>
+
+  .page-hero {
+    background: linear-gradient(135deg, #1a1d27 0%, #141720 100%);
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .page-hero-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+  }
+  .page-hero-type {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #90caf9;
+    margin-bottom: 10px;
+  }
+  .page-hero-type.reef { color: #4dd0e1; }
+  .page-hero-type.ref { color: #ffb74d; }
+  .page-hero-summary {
+    font-size: 14px;
+    color: #b0bec5;
+    line-height: 1.55;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .source-strip {
+    font-size: 12px;
+    color: #78909c;
+    background: #141720;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  .source-strip a { color: #90caf9; }
+  .quick-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #2d3140;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .quick-stat {
+    background: #141720;
+    padding: 14px 12px;
+    text-align: center;
+  }
+  .quick-stat-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #78909c;
+    margin-bottom: 4px;
+  }
+  .quick-stat-value {
+    font-size: 13px;
+    color: #e2e8f0;
+    line-height: 1.4;
+  }
+  .details-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    background: #141720;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    padding: 12px 18px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: #b0bec5;
+  }
+  .detail-item { white-space: nowrap; }
+  .detail-label { color: #78909c; font-weight: 600; margin-right: 4px; }
+  .content-block {
+    background: #1a1d27;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  .content-heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: #90caf9;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #2d3140;
+  }
+  .content-text {
+    font-size: 15px;
+    color: #cfd8e6;
+    line-height: 1.75;
+  }
+  footer { margin-top: 24px; }
+  @media (max-width: 639px) {
+    .page-hero { padding: 20px 16px; }
+    .page-hero-title { font-size: 20px; }
+    .page-hero-summary { font-size: 13px; }
+    .quick-stats { grid-template-columns: repeat(2, 1fr); }
+    .content-block { padding: 16px; }
+    .content-text { font-size: 14px; }
+    .source-strip { flex-direction: column; align-items: flex-start; }
+    .details-row { flex-direction: column; gap: 6px; }
+    .detail-item { white-space: normal; }
+  }
+
+</style>
 </head><body>
 <div class="top-bar">
   <a class="site-title" href="index.html">Bermuda Wrecks &amp; Reefs</a>
@@ -14,47 +138,40 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="site-page-header">
-    <div class="site-page-title">The Hermes</div>
-    <div class="site-page-type">Wreck</div>
+  <div class="page-hero">
+    <div class="page-hero-title">The Hermes</div>
+    <div class="page-hero-type">Wreck</div>
+    <div class="page-hero-summary">Built in 1943 in Pennsylvania, the Hermes was originally used as a U.</div>
   </div>
-  <div class="source-box">
-    <strong>Source:</strong> <a href="https://bermuda100.ucsd.edu/hermes/" target="_blank">https://bermuda100.ucsd.edu/hermes/</a>
+  <div class="source-strip">
+    <span>Source:</span> <a href="https://bermuda100.ucsd.edu/hermes/" target="_blank">https://bermuda100.ucsd.edu/hermes/</a>
   </div>
-  <div class="stats-box">
-    <div class="stats-title">Site Details</div>
-    <div class="stats-grid">
-      <div class="stat-row"><span class="stat-label">Depth</span><span class="stat-value">75–80 feet (23–24.4 m) — wheelhouse just 45 feet from surface</span></div>
-
-      <div class="stat-row"><span class="stat-label">Location</span><span class="stat-value">32°14&#x27;42.61&quot;N, 64°47&#x27;58.20&quot;W — approximately 1.8 km south of Warwick Long Bay Beach, near Horseshoe Bay</span></div>
-
-      <div class="stat-row"><span class="stat-label">Length</span><span class="stat-value">165 feet (50 m)</span></div>
-
-      <div class="stat-row"><span class="stat-label">Tonnage</span><span class="stat-value">254 tons</span></div>
-
-      <div class="stat-row"><span class="stat-label">Built</span><span class="stat-value">1943 in Pennsylvania, USA</span></div>
-
-      <div class="stat-row"><span class="stat-label">Sank</span><span class="stat-value">May 15, 1984 — intentionally scuttled by the Bermuda Dive Association (purchased for $1 from Bermudan Government after being abandoned in St. Georges Harbour in 1983)</span></div>
-
-      <div class="stat-row"><span class="stat-label">Protected</span><span class="stat-value">Protected Area — No Fishing: 500m</span></div>
-
-    </div>
+  <div class="quick-stats">
+    <div class="quick-stat"><div class="quick-stat-label">Depth</div><div class="quick-stat-value">75–80 feet (23–24.4 m) — wheelhouse just 45 feet from surface</div></div>
+    <div class="quick-stat"><div class="quick-stat-label">Location</div><div class="quick-stat-value">32°14&#x27;42.61&quot;N, 64°47&#x27;58.20&quot;W — approximately 1.8 km south of W...</div></div>
+    <div class="quick-stat"><div class="quick-stat-label">Length</div><div class="quick-stat-value">165 feet (50 m)</div></div>
+    <div class="quick-stat"><div class="quick-stat-label">Tonnage</div><div class="quick-stat-value">254 tons</div></div>
   </div>
-  <div class="wreck-section">
-    <div class="section-heading">Vessel Type</div>
-    <div class="section-text">U.S. Coast Guard buoy tender (later freighter Brava Fogo) — intentionally scuttled as artificial reef</div>
+  <div class="details-row">
+    <div class="detail-item"><span class="detail-label">Built:</span> 1943 in Pennsylvania, USA</div>
+    <div class="detail-item"><span class="detail-label">Sank:</span> May 15, 1984 — intentionally scuttled by the Bermuda Dive Association (purcha...</div>
+    <div class="detail-item"><span class="detail-label">Protected:</span> Protected Area — No Fishing: 500m</div>
   </div>
-  <div class="wreck-section">
-    <div class="section-heading">History</div>
-    <div class="section-text">Built in 1943 in Pennsylvania, the Hermes was originally used as a U.S. Coast Guard buoy tender until the end of World War II. The steel vessel featured a tall mast forward of the wheelhouse and was fitted with a single cargo boom. The cargo hatch itself was on the foredeck — a unique design to accommodate raising and lowering navigation buoys for repair and replacement. After being decommissioned, the ship was turned into a freighter registered in Panama under the name Brava Fogo, which relocated to the Philippines to carry mixed cargo. In 1983, en route from Rhode Island to the Cape Verde Islands, the small freighter experienced engine trouble off the coast of Bermuda and barely reached St. Georges Harbour. There was no money available for repairs and the crew hadn&#x27;t been paid any wages for months, so the ship was abandoned. Even the cargo of second-hand gifts had little value. The Bermudan Government took possession of the ship and sold her to the Bermuda Dive Association for the sum of one U.S. dollar. The Hermes was thoroughly cleaned and made &#x27;diver friendly&#x27; before being towed approximately one mile off the south shore near Horseshoe Bay. The ship was more than 40 years old when she was scuttled on May 15, 1984 to become an artificial reef and dive site.</div>
+  <div class="content-block">
+    <div class="content-heading">Vessel Type</div>
+    <div class="content-text">U.S. Coast Guard buoy tender (later freighter Brava Fogo) — intentionally scuttled as artificial reef</div>
   </div>
-  <div class="wreck-section">
-    <div class="section-heading">Current Condition</div>
-    <div class="section-text">The wreck of the Hermes is one of Bermuda&#x27;s most popular dive sites, located approximately 1.8 km south of Warwick Long Bay Beach and teeming with marine life. She lies almost fully intact and upright on a flat sand bottom in 75 to 80 feet of water against the deep reef after the wreck shifted 200 yards during Hurricane Emily in 1985. (Despite the relocation, the Hermes is still upright, listing only 10 degrees to port side.) Her wheelhouse is just 45 feet from the surface, and underwater visibility is usually very good at around 100 feet most of the year (considered to be one of the best wrecks for visibility in Bermuda waters). Divers can either skirt around the outside of the wreck or penetrate deep within. The engine room and parts of the bridge are easily accessible. Main features include the engines, mast, toilet, wash basin and cargo boom, which used to pick up the buoys. While small, the vessel is popular with divers and photographers because she is completely intact (minus the hatches removed as a safety precaution). ---------------------------------------------------------------------- Reference: https://bermuda100.ucsd.edu/hermes/ ----------------------------------------------------------------------</div>
+  <div class="content-block">
+    <div class="content-heading">History</div>
+    <div class="content-text">Built in 1943 in Pennsylvania, the Hermes was originally used as a U.S. Coast Guard buoy tender until the end of World War II. The steel vessel featured a tall mast forward of the wheelhouse and was fitted with a single cargo boom. The cargo hatch itself was on the foredeck — a unique design to accommodate raising and lowering navigation buoys for repair and replacement. After being decommissioned, the ship was turned into a freighter registered in Panama under the name Brava Fogo, which relocated to the Philippines to carry mixed cargo. In 1983, en route from Rhode Island to the Cape Verde Islands, the small freighter experienced engine trouble off the coast of Bermuda and barely reached St. Georges Harbour. There was no money available for repairs and the crew hadn&#x27;t been paid any wages for months, so the ship was abandoned. Even the cargo of second-hand gifts had little value. The Bermudan Government took possession of the ship and sold her to the Bermuda Dive Association for the sum of one U.S. dollar. The Hermes was thoroughly cleaned and made &#x27;diver friendly&#x27; before being towed approximately one mile off the south shore near Horseshoe Bay. The ship was more than 40 years old when she was scuttled on May 15, 1984 to become an artificial reef and dive site.</div>
+  </div>
+  <div class="content-block">
+    <div class="content-heading">Current Condition</div>
+    <div class="content-text">The wreck of the Hermes is one of Bermuda&#x27;s most popular dive sites, located approximately 1.8 km south of Warwick Long Bay Beach and teeming with marine life. She lies almost fully intact and upright on a flat sand bottom in 75 to 80 feet of water against the deep reef after the wreck shifted 200 yards during Hurricane Emily in 1985. (Despite the relocation, the Hermes is still upright, listing only 10 degrees to port side.) Her wheelhouse is just 45 feet from the surface, and underwater visibility is usually very good at around 100 feet most of the year (considered to be one of the best wrecks for visibility in Bermuda waters). Divers can either skirt around the outside of the wreck or penetrate deep within. The engine room and parts of the bridge are easily accessible. Main features include the engines, mast, toilet, wash basin and cargo boom, which used to pick up the buoys. While small, the vessel is popular with divers and photographers because she is completely intact (minus the hatches removed as a safety precaution). ---------------------------------------------------------------------- Reference: https://bermuda100.ucsd.edu/hermes/ ----------------------------------------------------------------------</div>
   </div>
 </div>
 <footer class="footer">
-  <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-24</p>
+  <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-25</p>
 </footer>
 
 <script>

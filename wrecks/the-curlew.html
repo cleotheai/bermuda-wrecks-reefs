@@ -3,6 +3,130 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Curlew — Bermuda Wrecks &amp; Reefs</title>
 <link rel="stylesheet" href="styles.css">
+<style>
+
+  .page-hero {
+    background: linear-gradient(135deg, #1a1d27 0%, #141720 100%);
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .page-hero-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+  }
+  .page-hero-type {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #90caf9;
+    margin-bottom: 10px;
+  }
+  .page-hero-type.reef { color: #4dd0e1; }
+  .page-hero-type.ref { color: #ffb74d; }
+  .page-hero-summary {
+    font-size: 14px;
+    color: #b0bec5;
+    line-height: 1.55;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .source-strip {
+    font-size: 12px;
+    color: #78909c;
+    background: #141720;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  .source-strip a { color: #90caf9; }
+  .quick-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #2d3140;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .quick-stat {
+    background: #141720;
+    padding: 14px 12px;
+    text-align: center;
+  }
+  .quick-stat-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #78909c;
+    margin-bottom: 4px;
+  }
+  .quick-stat-value {
+    font-size: 13px;
+    color: #e2e8f0;
+    line-height: 1.4;
+  }
+  .details-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    background: #141720;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    padding: 12px 18px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: #b0bec5;
+  }
+  .detail-item { white-space: nowrap; }
+  .detail-label { color: #78909c; font-weight: 600; margin-right: 4px; }
+  .content-block {
+    background: #1a1d27;
+    border: 1px solid #2d3140;
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  .content-heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: #90caf9;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #2d3140;
+  }
+  .content-text {
+    font-size: 15px;
+    color: #cfd8e6;
+    line-height: 1.75;
+  }
+  footer { margin-top: 24px; }
+  @media (max-width: 639px) {
+    .page-hero { padding: 20px 16px; }
+    .page-hero-title { font-size: 20px; }
+    .page-hero-summary { font-size: 13px; }
+    .quick-stats { grid-template-columns: repeat(2, 1fr); }
+    .content-block { padding: 16px; }
+    .content-text { font-size: 14px; }
+    .source-strip { flex-direction: column; align-items: flex-start; }
+    .details-row { flex-direction: column; gap: 6px; }
+    .detail-item { white-space: normal; }
+  }
+
+</style>
 </head><body>
 <div class="top-bar">
   <a class="site-title" href="index.html">Bermuda Wrecks &amp; Reefs</a>
@@ -14,17 +138,18 @@
 </div>
 <div class="main">
   <a class="back-link" href="index.html">&#8592; Back to all sites</a>
-  <div class="site-page-header">
-    <div class="site-page-title">The Curlew</div>
-    <div class="site-page-type ref">Reference Only</div>
+  <div class="page-hero">
+    <div class="page-hero-title">The Curlew</div>
+    <div class="page-hero-type ref">Reference Only</div>
+    <div class="page-hero-summary">Bermuda 100 or .</div>
   </div>
-  <div class="wreck-section">
-    <div class="section-heading">Description</div>
-    <div class="section-text">Bermuda 100 or . he iron-hulled, three-masted English steamer sailed the Halifax-Bermuda-St. Thomas route. Three years after the ship was bought by the Cunard Steamship Co., the Curlew sank on march 17th 1856 on the ring of breakers to the east of North Rock in rough seas. After navigating all night, the ship’s captain was still asleep when the vessel hit a northern reef not far from North Rock. Two lifeboats were destroyed against the side of the Curlew, a third drifted away, so only the four lifeboat was workable. In time, two navy ships joined the rescue effort, and all aboard were saved, as were seven out of nine mail bags. The ship featured Barkantine rigging, a poop deck and 22-foot beam. Teddy Tucker relocated and identified the wreck in 1955. 32°21&#x27;44.28&quot;N, 64°46&#x27;32.44&quot;W 182 feet (55.5 meters) 35 feet (10.6 meters) 528 tons</div>
+  <div class="content-block">
+    <div class="content-heading">Description</div>
+    <div class="content-text">Bermuda 100 or . he iron-hulled, three-masted English steamer sailed the Halifax-Bermuda-St. Thomas route. Three years after the ship was bought by the Cunard Steamship Co., the Curlew sank on march 17th 1856 on the ring of breakers to the east of North Rock in rough seas. After navigating all night, the ship’s captain was still asleep when the vessel hit a northern reef not far from North Rock. Two lifeboats were destroyed against the side of the Curlew, a third drifted away, so only the four lifeboat was workable. In time, two navy ships joined the rescue effort, and all aboard were saved, as were seven out of nine mail bags. The ship featured Barkantine rigging, a poop deck and 22-foot beam. Teddy Tucker relocated and identified the wreck in 1955. 32°21&#x27;44.28&quot;N, 64°46&#x27;32.44&quot;W 182 feet (55.5 meters) 35 feet (10.6 meters) 528 tons</div>
   </div>
 </div>
 <footer class="footer">
-  <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-24</p>
+  <p><a href="index.html">Bermuda Wrecks &amp; Reefs</a> &middot; Source: <a href="https://bermuda100.ucsd.edu/" target="_blank">UC San Diego Bermuda 100 Project</a> &middot; Compiled 2026-09-25</p>
 </footer>
 
 <script>
