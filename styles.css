@@ -56,7 +56,7 @@ body {
   margin: 0 auto;
   padding: 24px 16px 40px;
   background: #1a1d27;
-  min-height: 100vh;
+  min-height: calc(100vh - 52px);
 }
 .main > .back-link {
   color: #90caf9;
